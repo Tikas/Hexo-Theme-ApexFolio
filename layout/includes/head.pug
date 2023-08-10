@@ -1,0 +1,25 @@
+- var pageTitle
+- if (is_archive()) pageTitle = _P('page.archives')
+- else if (is_tag()) pageTitle = _p('page.tag') + ': ' + page.tag
+- else if (is_category()) pageTitle = _p('page.category') + ': ' + page.category
+- else if (is_current('/404', [strict]) || is_current('/404.html', [strict])) pageTitle = _p('error404')
+- else pageTitle = page.title || config.title || ''
+
+- var isSubtitle = config.subtitle ? config.subtitle : ''
+- var tabTitle = is_home() || !pageTitle ? config.title + ' - ' + isSubtitle : pageTitle + ' | ' + config.title
+- var pageCopyright = config.copyright || config.author
+- var pageKeywords = is_home() ? config.keywords : page.keywords
+- var pageDescription = page.description || config.description
+
+meta(charset="UTF-8")
+meta(http-equiv="content-language" content=config.language)
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover")
+title= tabTitle
+meta(name="author" content=config.author)
+meta(name="copyright" content=pageCopyright)
+meta(name="description" content=pageDescription)
+meta(name="keywords" content=pageKeywords)
+meta(name ="format-detection" content="telephone=no")
+
+!=favicon_tag(theme.site.favicon || config.favicon)

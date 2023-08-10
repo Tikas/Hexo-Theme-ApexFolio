@@ -1,0 +1,18 @@
+
+doctype html
+html
+  head
+    include ./head.pug
+  body
+    if page.type !== '404'
+
+      main
+        if body
+          div!= body
+        else
+          block content
+
+      footer#footer
+
+    else
+      include ./404.pug
