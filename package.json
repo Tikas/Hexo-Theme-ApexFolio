@@ -1,0 +1,29 @@
+{
+  "name": "hexo-theme-apexfolio",
+  "version": "0.0.1",
+  "description": "An elegant Hexo theme tailored for showcasing portfolios, projects, and creative works online.",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tikas/Hexo-Theme-ApexFolio.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "ApexFolio"
+  ],
+  "author": "Tikas (https://github.com/Tikas/)",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/Tikas/Hexo-Theme-ApexFolio/issues"
+  },
+  "homepage": "https://xtikas.com/",
+  "dependencies": {
+    "hexo": "^6.3.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-pug": "^3.0.0"
+  }
+}
