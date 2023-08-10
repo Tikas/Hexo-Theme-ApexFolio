@@ -1,0 +1,9 @@
+# English (en)
+
+page:
+  articles: Articles
+  tag: Tag
+  category: Category
+  archives: Archives
+
+error404: Page not found
