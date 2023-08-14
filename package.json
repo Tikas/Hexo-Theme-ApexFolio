@@ -21,6 +21,9 @@
     "url": "https://github.com/Tikas/Hexo-Theme-ApexFolio/issues"
   },
   "homepage": "https://xtikas.com/",
+  "devDependencies": {
+    "parcel": "^2.9.0"
+  },
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-renderer-stylus": "^3.0.0",
