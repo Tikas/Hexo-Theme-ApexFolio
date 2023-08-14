@@ -1,5 +1,28 @@
+########################### Navigation Bar ########################### > start
+# 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 
 # site-related configuration
 # 站点相关配置
 site:
   favicon: /favicon.ico
+  logo: /favicon.ico
+  display_title: true #显示站点名称，默认为 true, 设置 false 为不显示
+
+# main menu navigation
+menu:
+  Home: /
+  List:
+    Item1: /
+    Item2: /
+  Link: link/
+  About: about/
+
+# Navigation bar right-side button
+nav_button:
+  enable: true #导航栏右侧按钮总开关，设置 false 为不显示，以下所有按钮开启了也不会显示
+  container:
+    enable: true #在导航栏显示内容按钮，设置 false 为不显示
+    title: Try for free
+    url: /
+
+########################### Navigation Bar ########################### > end

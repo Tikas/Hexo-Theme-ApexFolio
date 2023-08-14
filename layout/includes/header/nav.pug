@@ -1,0 +1,23 @@
+#nav
+  .nav-container
+    .nav-left
+      a.site-logo(href=url_for("/"))
+        if theme.site.logo
+          img.site-logo-img(src=url_for(trim(theme.site.logo)) alt="logo")
+        if theme.site.display_title
+          span.site-title=config.title
+
+    if (theme.menu && theme.nav_button.enable)
+      .nav-center
+        !=partial("includes/header/menu", {}, {cache: true})
+      .nav-right
+        !=partial("includes/header/nav-button", {}, {cache: true})
+    else if (theme.menu && !theme.nav_button.enable)
+      .nav-right
+        !=partial("includes/header/menu", {}, {cache: true})
+    else if (!theme.menu && theme.nav_button.enable)
+      .nav-right
+        !=partial("includes/header/nav-button", {}, {cache: true})
+
+  //- Mobile full screen menu
+  #fullscreen-menu
