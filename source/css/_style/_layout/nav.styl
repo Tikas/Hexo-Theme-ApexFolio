@@ -1,3 +1,22 @@
+$mobile-menu-scroll-before = hexo-config('mobile_menu_scroll.before')
+$mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
+
+@keyframes menubgmoving
+  0%
+    background-position: center bottom
+  50%
+    background-position: center top
+  100%
+    background-position: center bottom
+
+@keyframes menubgmovingback
+  0%
+    background-position: center top
+  50%
+    background-position: center bottom
+  100%
+    background-position: center top
+
 #nav
   display flex
   width 100%
@@ -21,6 +40,9 @@
   z-index 2
   transition ease-in-out 0.3s
 
+.nav-left
+  z-index 9
+
 .nav-center,
 .nav-right
   display flex
@@ -32,10 +54,10 @@
   text-decoration none
 
 .site-logo-img
-  height 3rem
+  height 2.5rem
 
 .site-title
-  color #333
+  color var(--color-text)
   margin-left 0.5rem
   font-size 14px
 
@@ -64,7 +86,7 @@
   transition none
 
 .menu-link
-  color #333
+  color var(--color-text)
   opacity 0.8
   transition ease-in-out 0.3s
   font-size 14px
@@ -99,3 +121,105 @@
   &:hover
     background #eee
     color #000
+
+#menu-button
+  display none
+  user-select none
+
+.fullscreen-menu
+  display none
+  position fixed
+  overflow hidden
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  background-color #080808
+  align-items center
+  z-index 5
+
+.fullscreen-menu.active
+  display flex
+
+.site-title.active,
+.menu-button.active
+  color #ccc
+
+.mobile-nav
+  display flex
+  width 90%
+  height 100vh
+  margin 0 auto
+  flex-direction column
+  justify-content space-between
+  z-index 6
+
+.mobile_menu_scroll
+  opacity 0
+  visibility hidden
+  &:before,
+  &:after
+    position absolute
+    content ""
+    width 150px
+    height 100%
+    top 0
+    visibility hidden
+    transition all 0.3s ease
+    transition-delay 250ms
+    filter brightness(33%)
+  &:before
+    right 175px
+    background url($mobile-menu-scroll-before) no-repeat center bottom
+    background-size cover
+    animation menubgmovingback 100s linear infinite
+  &:after
+    right 0
+    background url($mobile-menu-scroll-after) no-repeat center bottom
+    background-size cover
+    animation menubgmoving 100s linear infinite
+
+@media screen and (min-width: 769px)
+  .fullscreen-menu.active
+    display none
+
+  .site-title.active,
+  .menu-button.active
+    color var(--color-text)
+
+@media screen and (max-width: 768px)
+  .nav-center,
+  .nav-right .menu-link
+    display none
+
+  #menu-button
+    display flex
+    padding 8px 0 8px 8px
+    font-size 24px
+    cursor pointer
+    z-index 9
+
+  .mobile_menu_scroll
+    opacity 1
+    visibility visible
+    &:before
+      visibility visible
+      width 200px
+      right 280px
+    &:after
+      visibility visible
+      width 200px
+      right 40px
+
+@media screen and (max-width: 500px)
+  .mobile_menu_scroll
+    opacity 1
+    visibility visible
+    &:before
+      visibility visible
+      width 150px
+      right 180px
+    &:after
+      visibility visible
+      width 150px
+      right 10px

@@ -14,8 +14,21 @@ menu:
   List:
     Item1: /
     Item2: /
-  Link: link/
+  Link: /
   About: about/
+
+# mobile menu navigation, Do not have a submenu
+mobile_menu:
+  Link: /
+  Docs: /
+  About: about/
+  Contact: /
+
+# mobile menu scroll, If not enabled, please set enable to false
+mobile_menu_scroll:
+  enable: true
+  before: /assets/menu_scroll_before.webp
+  after: /assets/menu_scroll_after.webp
 
 # Navigation bar right-side button
 nav_button:
