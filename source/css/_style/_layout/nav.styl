@@ -69,7 +69,9 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
   position relative
 
 .menu-list,
-.menu-item
+.menu-item,
+.mobile-menu-list,
+.mobile-menu-item
   list-style none
   margin 0
   padding 0
@@ -140,6 +142,7 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
 
 .fullscreen-menu.active
   display flex
+  transition ease-in-out 0.3s
 
 .site-title.active,
 .menu-button.active
@@ -179,10 +182,22 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
     background-size cover
     animation menubgmoving 100s linear infinite
 
+.mobile-menu-link-group,
+.mobile-menu-footer
+  z-index 7
+
+.mobile-menu-link
+  display inline-block
+  text-decoration none
+  padding 2rem 0 1rem
+  color #fff
+  font-weight 600
+  font-size 2rem
+  line-height 2rem
+
 @media screen and (min-width: 769px)
   .fullscreen-menu.active
     display none
-
   .site-title.active,
   .menu-button.active
     color var(--color-text)
@@ -191,14 +206,12 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
   .nav-center,
   .nav-right .menu-link
     display none
-
   #menu-button
     display flex
     padding 8px 0 8px 8px
     font-size 24px
     cursor pointer
     z-index 9
-
   .mobile_menu_scroll
     opacity 1
     visibility visible
@@ -210,6 +223,9 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
       visibility visible
       width 200px
       right 40px
+  .mobile-menu-link-group,
+  .mobile-menu-footer
+    padding 0 2rem
 
 @media screen and (max-width: 500px)
   .mobile_menu_scroll
@@ -223,3 +239,6 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
       visibility visible
       width 150px
       right 10px
+  .mobile-menu-link-group,
+  .mobile-menu-footer
+    padding 0 1rem
