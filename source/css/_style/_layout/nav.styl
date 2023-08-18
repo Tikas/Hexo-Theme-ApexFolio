@@ -24,11 +24,12 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
   position fixed
   justify-content center
   flex-direction column
-  background hsla(0, 0%, 100%, 0.85)
+  background hsla(0, 0%, 100%, 0.5)
   align-items center
   z-index 2
   transition ease-in-out 0.3s
-  backdrop-filter blur(1rem) /* 调整模糊效果的值 */
+  -webkit-backdrop-filter blur(1rem)
+  backdrop-filter blur(1rem)
 
 .nav-container
   max-width 1200px
