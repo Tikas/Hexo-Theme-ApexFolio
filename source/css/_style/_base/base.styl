@@ -1,6 +1,18 @@
 :root
   --color-text: $color-text
 
+::-webkit-scrollbar
+  width 6px
+  height 6px
+::-webkit-scrollbar-thumb
+  background rgba(50, 50, 50, 0.3)
+  border-radius 8px
+  cursor pointer
+  &:hover
+    opacity 1
+::-webkit-scrollbar-track
+  background-color transparent
+
 html
   color var(--color-text)
   width 100%

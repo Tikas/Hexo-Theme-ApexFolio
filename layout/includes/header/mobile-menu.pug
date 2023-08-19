@@ -1,11 +1,11 @@
-- let mobileMenuScroll = theme.mobile_menu_scroll.enable ? "mobile-nav mobile_menu_scroll" : "mobile-nav"
+- let mobileMenuScroll = theme.mobile_menu_scroll.enable ? 'mobile-nav mobile_menu_scroll' : 'mobile-nav'
 
 div(class=mobileMenuScroll)
   div
   .mobile-menu-link-group
     ul.mobile-menu-list
     each value, label in theme.mobile_menu
-      if typeof value !== "object"
+      if typeof value !== 'object'
         li.mobile-menu-item
           a.mobile-menu-link(href=url_for(trim(value)))=label
   .mobile-menu-footer

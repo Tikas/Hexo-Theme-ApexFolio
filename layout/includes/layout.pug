@@ -1,3 +1,4 @@
+- var homePage = is_home() && page.prev == 0
 
 doctype html
 html
@@ -9,6 +10,10 @@ html
 
       include ./header/index.pug
 
+      //- 首页轮播是否开启
+      if homePage && theme.slide.enable
+        include ./_partial/slide.pug
+
       main
         if body
           div!= body
@@ -17,7 +22,9 @@ html
 
       footer#footer
 
+      include ./_partial/scripts/imagesloaded.pug
       include ./_partial/scripts/fullscreen-menu.pug
+      include ./_partial/scripts/home-slide.pug
 
     else
       include ./404.pug

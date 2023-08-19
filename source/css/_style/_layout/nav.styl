@@ -28,8 +28,8 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
   align-items center
   z-index 2
   transition ease-in-out 0.3s
-  -webkit-backdrop-filter blur(1rem)
-  backdrop-filter blur(1rem)
+  -webkit-backdrop-filter blur(8px)
+  backdrop-filter blur(8px)
 
 .nav-container
   max-width 1200px
@@ -52,13 +52,13 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
 .site-logo
   display flex
   align-items center
+  color var(--color-text)
   text-decoration none
 
 .site-logo-img
   height 2.5rem
 
 .site-title
-  color var(--color-text)
   margin-left 0.5rem
   font-size 14px
 
@@ -142,7 +142,7 @@ $mobile-menu-scroll-after = hexo-config('mobile_menu_scroll.after')
   display flex
   transition ease-in-out 0.3s
 
-.site-title.active,
+.site-logo.active,
 .menu-button.active
   color #ccc
 

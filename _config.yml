@@ -5,8 +5,8 @@
 # 站点相关配置
 site:
   favicon: /favicon.ico
-  logo: /favicon.ico
-  display_title: true #显示站点名称，默认为 true, 设置 false 为不显示
+  logo: /assets/logo.png
+  display_title: false #显示站点名称，true 为显示，false 为不显示
 
 # main menu navigation
 menu:
@@ -15,13 +15,13 @@ menu:
     Item1: /
     Item2: /
   Link: /
-  About: about/
+  About: /about/
 
 # mobile menu navigation, Do not have a submenu
 mobile_menu:
   Link: /
   Docs: /
-  About: about/
+  About: /about/
   Contact: /
 
 # mobile menu scroll, If not enabled, please set enable to false
@@ -39,3 +39,80 @@ nav_button:
     url: /
 
 ########################### Navigation Bar ########################### > end
+
+
+########################### imagesloaded ########################### > start
+# TODO：后续学习 JS 后，来运用它，注意：这代码应该改写出 cdn 和内部两块
+imagesloaded:
+  enable: false
+  js:
+    src: https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js
+    integrity: sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==
+########################### imagesloaded ########################### > end
+
+
+########################### Slide ########################### > start
+# 启用后，本地的 slide js 和 css 将会在 cdn 加载出错时调用，请确保 slide 里的 js 和 css 有设置
+swiper_cdnjs:
+  enable: true
+  js:
+    src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
+    integrity: sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==
+  css:
+    href: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css
+    integrity: sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==
+
+slide:
+  enable: true
+  js: /js/swiper-bundle.min.js # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper js
+  css: /css/swiper-bundle.min.css # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper css
+  wrapper:
+    # 第一组
+    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/1.avif
+        webp_url: /assets/1.webp
+        url: /assets/1.jpg
+      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/1m.avif
+        webp_url: /assets/1m.webp
+        url: /assets/1m.jpg
+      introduce:
+        position: center
+        title: Getting
+        subtitle: Wit once bought is worth twice taught
+        white_title: false
+        button_title: Read more
+        button_url: /
+    # 第二组
+    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/2.avif
+        webp_url: /assets/2.webp
+        url: /assets/2.jpg
+      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/2m.avif
+        webp_url: /assets/2m.webp
+        url: /assets/2m.jpg
+      introduce:
+        position: left
+        title: 阿甘正传
+        subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
+        white_title: false
+        button_title: 点击查看
+        button_url: /
+    # 第三组
+    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/3.avif
+        webp_url: /assets/3.webp
+        url: /assets/3.jpg
+      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+        avif_url: /assets/3m.avif
+        webp_url: /assets/3m.webp
+        url: /assets/3m.jpg
+      introduce:
+        position: right
+        title: Actions
+        subtitle: To learn to be just and constant, not just is sui Hui, not constant retreat
+        white_title: true
+        button_title: Read more
+        button_url: /
+########################### Slide ########################### > end

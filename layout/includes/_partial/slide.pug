@@ -1,0 +1,26 @@
+if theme.slide.enable
+  #home-swiper.home-swiper
+    .swiper-wrapper
+      each item in theme.slide.wrapper
+        .swiper-slide
+          if item.mobile_img.url !== ''
+            picture
+              if item.mobile_img.avif_url !== ''
+                source(media='(max-width: 500px)' srcset=url_for(item.mobile_img.avif_url) type='image/avif')
+              if item.mobile_img.webp_url !== ''
+                source(media='(max-width: 500px)' srcset=url_for(item.mobile_img.webp_url) type='image/webp')
+              source(media='(max-width: 500px)' srcset=url_for(item.mobile_img.url))
+              if item.img.avif_url !== ''
+                source(media='(min-width: 501px)' srcset=url_for(item.img.avif_url) type='image/avif')
+              if item.img.webp_url !== ''
+                source(media='(min-width: 501px)' srcset=url_for(item.img.webp_url) type='image/webp')
+              source(media='(min-width: 501px)' srcset=url_for(item.img.url))
+              img.swiper-img(src=url_for(item.img.url) alt=item.introduce.title)
+          else
+            picture
+              if item.img.avif_url !== ''
+                source(srcset=url_for(item.img.avif_url) type='image/avif')
+              if item.img.webp_url !== ''
+                source(srcset=url_for(item.img.webp_url) type='image/webp')
+              img.swiper-img(src=url_for(item.img.url) alt=item.introduce.title)
+

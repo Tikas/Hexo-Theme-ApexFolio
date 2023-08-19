@@ -1,0 +1,31 @@
+if homePage && theme.slide.enable
+  script.
+    function loadSwiperJS() {
+      const script = document.createElement('script')
+      script.src = '/js/swiper-bundle.min.js'
+      script.onload = () => {
+        initSwiperConfig()
+      }
+      document.body.appendChild(script)
+    }
+    function initSwiperConfig() {
+      let homeSwiper = new Swiper('.home-swiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        effect: 'fade',
+        loop: true,
+        autoplay: {
+          delay: 8000,
+          disableOnInteraction: false
+        }
+      })
+    }
+
+  //- import swiper js
+  if theme.swiper_cdnjs.enable && theme.swiper_cdnjs.js.src !== ''
+    if theme.swiper_cdnjs.js.integrity !== ''
+      script(src=url_for(theme.swiper_cdnjs.js.src) integrity=theme.swiper_cdnjs.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
+    else
+      script(src=url_for(theme.swiper_cdnjs.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
+  else
+    script(src=url_for(theme.slide.js) onload='initSwiperConfig()')

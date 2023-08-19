@@ -11,17 +11,34 @@
 - var pageKeywords = is_home() ? config.keywords : page.keywords
 - var pageDescription = page.description || config.description
 
-meta(charset="UTF-8")
-meta(http-equiv="content-language" content=config.language)
-meta(http-equiv="X-UA-Compatible" content="IE=edge")
-meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover")
+meta(charset='UTF-8')
+meta(http-equiv='content-language' content=config.language)
+meta(http-equiv='X-UA-Compatible' content='IE=edge')
+meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover')
 title= tabTitle
-meta(name="author" content=config.author)
-meta(name="copyright" content=pageCopyright)
-meta(name="description" content=pageDescription)
-meta(name="keywords" content=pageKeywords)
-meta(name ="format-detection" content="telephone=no")
+meta(name='author' content=config.author)
+meta(name='copyright' content=pageCopyright)
+meta(name='description' content=pageDescription)
+meta(name='keywords' content=pageKeywords)
+meta(name ='format-detection' content='telephone=no')
 
 !=favicon_tag(theme.site.favicon || config.favicon)
 
-link(rel="stylesheet", href=url_for('/css/style.css'))
+link(rel='stylesheet' href=url_for('/css/style.css'))
+
+if theme.slide.enable && homePage
+  script.
+    function loadSwiperCSS() {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = '/css/swiper-bundle.min.css'
+      document.head.appendChild(link)
+    }
+  if theme.swiper_cdnjs.enable && theme.swiper_cdnjs.css.href !== ''
+    if theme.swiper_cdnjs.css.integrity !== ''
+      link(rel='stylesheet' href=url_for(theme.swiper_cdnjs.css.href) integrity=theme.swiper_cdnjs.css.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
+    else
+      link(rel='stylesheet' href=url_for(theme.swiper_cdnjs.css.href) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
+  else
+    link(rel='stylesheet' href=url_for(theme.slide.css))
+

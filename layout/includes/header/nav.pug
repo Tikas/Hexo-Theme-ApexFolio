@@ -1,24 +1,24 @@
 #nav
   .nav-container
     .nav-left
-      a.site-logo(href=url_for("/"))
+      a#site-logo.site-logo(href=url_for('/'))
         if theme.site.logo
-          img.site-logo-img(src=url_for(trim(theme.site.logo)) alt="logo")
+          img.site-logo-img(src=url_for(trim(theme.site.logo)) alt='logo')
         if theme.site.display_title
-          span#site-title.site-title=config.title
+          span.site-title=config.title
 
     if (theme.menu && theme.nav_button.enable)
       .nav-center
-        !=partial("includes/header/menu", {}, {cache: true})
+        !=partial('includes/header/menu', {}, {cache: true})
       .nav-right
-        !=partial("includes/header/nav-button", {}, {cache: true})
+        !=partial('includes/header/nav-button', {}, {cache: true})
     else if (theme.menu && !theme.nav_button.enable)
       .nav-right
-        !=partial("includes/header/menu", {}, {cache: true})
+        !=partial('includes/header/menu', {}, {cache: true})
     else if (!theme.menu && theme.nav_button.enable)
       .nav-right
-        !=partial("includes/header/nav-button", {}, {cache: true})
+        !=partial('includes/header/nav-button', {}, {cache: true})
 
     //- Mobile full screen menu
     #fullscreen-menu.fullscreen-menu
-      !=partial("includes/header/mobile-menu", {}, {cache: true})
+      !=partial('includes/header/mobile-menu', {}, {cache: true})
