@@ -35,7 +35,7 @@ nav_button:
   enable: true #导航栏右侧按钮总开关，设置 false 为不显示，以下所有按钮开启了也不会显示
   container:
     enable: true #在导航栏显示内容按钮，设置 false 为不显示
-    title: Get started
+    text: Get started
     link: /
 
 ########################### Navigation Bar ########################### > end
@@ -87,8 +87,10 @@ slide:
         title: Getting
         subtitle: Wit once bought is worth twice taught
         white_title: false
-        button_title: Read more
-        button_link: /
+        button:
+          style:
+          text: Read more
+          link: /
     # 第二组
     # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
     - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
@@ -108,8 +110,10 @@ slide:
         title: 阿甘正传
         subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
         white_title: false
-        button_title: 点击查看
-        button_link: /
+        button:
+          style:
+          text: 点击查看
+          link: /
     # 第三组
     # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
     - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
@@ -129,8 +133,10 @@ slide:
         title: Actions
         subtitle: To learn to be just and constant, not just is sui Hui, not constant retreat
         white_title: true
-        button_title: Read more
-        button_link: /
+        button:
+          style:
+          text: Read more
+          link: /
 ########################### Slide ########################### > end
 
 
@@ -152,8 +158,8 @@ section:
         # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
       button:
         style: # 按钮的样式风格
-        title: Learn more # 按钮的标题，同按钮链接一样，为空则不显示按钮
-        link: / # 按钮的链接，同按钮标题一样，为空则不显示按钮
+        text: Learn more # 按钮的文本，同按钮链接一样，为空则不显示按钮
+        link: / # 按钮的链接，同按钮文本一样，为空则不显示按钮
     # --------------- Section -> Library -> Kernel Banner --------------- > end
 
 ########################### Home Section ########################### > end
