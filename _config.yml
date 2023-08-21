@@ -67,15 +67,21 @@ slide:
   js: /js/swiper-bundle.min.js # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper js
   css: /css/swiper-bundle.min.css # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper css
   wrapper:
+    # TODO: 后续有时间实现 introduce
     # 第一组
-    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/1.avif
-        webp_url: /assets/1.webp
-        url: /assets/1.jpg
-      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/1m.avif
-        webp_url: /assets/1m.webp
-        url: /assets/1m.jpg
+    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+        avif_url: /assets/slide/1.avif
+        webp_url: /assets/slide/1.webp
+        url: /assets/slide/1.jpg
+      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+        avif_url: /assets/slide/tablet-1.avif
+        webp_url: /assets/slide/tablet-1.webp
+        url: /assets/slide/tablet-1.jpg
+      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+        avif_url: /assets/slide/mobile-1.avif
+        webp_url: /assets/slide/mobile-1.webp
+        url: /assets/slide/mobile-1.jpg
       introduce:
         position: center
         title: Getting
@@ -84,14 +90,19 @@ slide:
         button_title: Read more
         button_url: /
     # 第二组
-    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/2.avif
-        webp_url: /assets/2.webp
-        url: /assets/2.jpg
-      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/2m.avif
-        webp_url: /assets/2m.webp
-        url: /assets/2m.jpg
+    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+        avif_url: /assets/slide/2.avif
+        webp_url: /assets/slide/2.webp
+        url: /assets/slide/2.jpg
+      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+        avif_url: /assets/slide/tablet-2.avif
+        webp_url: /assets/slide/tablet-2.webp
+        url: /assets/slide/tablet-2.jpg
+      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+        avif_url: /assets/slide/mobile-2.avif
+        webp_url: /assets/slide/mobile-2.webp
+        url: /assets/slide/mobile-2.jpg
       introduce:
         position: left
         title: 阿甘正传
@@ -100,14 +111,19 @@ slide:
         button_title: 点击查看
         button_url: /
     # 第三组
-    - img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/3.avif
-        webp_url: /assets/3.webp
-        url: /assets/3.jpg
-      mobile_img: # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
-        avif_url: /assets/3m.avif
-        webp_url: /assets/3m.webp
-        url: /assets/3m.jpg
+    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+        avif_url: /assets/slide/3.avif
+        webp_url: /assets/slide/3.webp
+        url: /assets/slide/3.jpg
+      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+        avif_url: /assets/slide/tablet-3.avif
+        webp_url: /assets/slide/tablet-3.webp
+        url: /assets/slide/tablet-3.jpg
+      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+        avif_url: /assets/slide/mobile-3.avif
+        webp_url: /assets/slide/mobile-3.webp
+        url: /assets/slide/mobile-3.jpg
       introduce:
         position: right
         title: Actions
