@@ -18,6 +18,10 @@ html
         if body
           div!= body
         else
+          if homePage
+            //- 加载首页各板块
+            include ./_partial/home-section.pug
+
           block content
 
       footer#footer

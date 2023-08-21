@@ -1,12 +1,12 @@
 ########################### Navigation Bar ########################### > start
-# 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
+# 注意事项：建议规范全站路径 link 最后带一个 "/" 例如 "about/"
 
 # site-related configuration
 # 站点相关配置
 site:
   favicon: /favicon.ico
-  logo: /assets/logo.png
-  display_title: false #显示站点名称，true 为显示，false 为不显示
+  logo: /favicon.ico
+  display_title: true #显示站点名称，true 为显示，false 为不显示
 
 # main menu navigation
 menu:
@@ -35,8 +35,8 @@ nav_button:
   enable: true #导航栏右侧按钮总开关，设置 false 为不显示，以下所有按钮开启了也不会显示
   container:
     enable: true #在导航栏显示内容按钮，设置 false 为不显示
-    title: Try for free
-    url: /
+    title: Get started
+    link: /
 
 ########################### Navigation Bar ########################### > end
 
@@ -69,66 +69,91 @@ slide:
   wrapper:
     # TODO: 后续有时间实现 introduce
     # 第一组
-    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
     - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
-        avif_url: /assets/slide/1.avif
-        webp_url: /assets/slide/1.webp
-        url: /assets/slide/1.jpg
+        avif_link: /assets/slide/1.avif
+        webp_link: /assets/slide/1.webp
+        link: /assets/slide/1.jpg
       tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
-        avif_url: /assets/slide/tablet-1.avif
-        webp_url: /assets/slide/tablet-1.webp
-        url: /assets/slide/tablet-1.jpg
+        avif_link: /assets/slide/tablet-1.avif
+        webp_link: /assets/slide/tablet-1.webp
+        link: /assets/slide/tablet-1.jpg
       mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
-        avif_url: /assets/slide/mobile-1.avif
-        webp_url: /assets/slide/mobile-1.webp
-        url: /assets/slide/mobile-1.jpg
+        avif_link: /assets/slide/mobile-1.avif
+        webp_link: /assets/slide/mobile-1.webp
+        link: /assets/slide/mobile-1.jpg
       introduce:
         position: center
         title: Getting
         subtitle: Wit once bought is worth twice taught
         white_title: false
         button_title: Read more
-        button_url: /
+        button_link: /
     # 第二组
-    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
     - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
-        avif_url: /assets/slide/2.avif
-        webp_url: /assets/slide/2.webp
-        url: /assets/slide/2.jpg
+        avif_link: /assets/slide/2.avif
+        webp_link: /assets/slide/2.webp
+        link: /assets/slide/2.jpg
       tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
-        avif_url: /assets/slide/tablet-2.avif
-        webp_url: /assets/slide/tablet-2.webp
-        url: /assets/slide/tablet-2.jpg
+        avif_link: /assets/slide/tablet-2.avif
+        webp_link: /assets/slide/tablet-2.webp
+        link: /assets/slide/tablet-2.jpg
       mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
-        avif_url: /assets/slide/mobile-2.avif
-        webp_url: /assets/slide/mobile-2.webp
-        url: /assets/slide/mobile-2.jpg
+        avif_link: /assets/slide/mobile-2.avif
+        webp_link: /assets/slide/mobile-2.webp
+        link: /assets/slide/mobile-2.jpg
       introduce:
         position: left
         title: 阿甘正传
         subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
         white_title: false
         button_title: 点击查看
-        button_url: /
+        button_link: /
     # 第三组
-    # 图片的 url 为普通的 jpg png gif 等图片格式，url 此值不能为空。avif 和 webp 请专门设置
+    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
     - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
-        avif_url: /assets/slide/3.avif
-        webp_url: /assets/slide/3.webp
-        url: /assets/slide/3.jpg
+        avif_link: /assets/slide/3.avif
+        webp_link: /assets/slide/3.webp
+        link: /assets/slide/3.jpg
       tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
-        avif_url: /assets/slide/tablet-3.avif
-        webp_url: /assets/slide/tablet-3.webp
-        url: /assets/slide/tablet-3.jpg
+        avif_link: /assets/slide/tablet-3.avif
+        webp_link: /assets/slide/tablet-3.webp
+        link: /assets/slide/tablet-3.jpg
       mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
-        avif_url: /assets/slide/mobile-3.avif
-        webp_url: /assets/slide/mobile-3.webp
-        url: /assets/slide/mobile-3.jpg
+        avif_link: /assets/slide/mobile-3.avif
+        webp_link: /assets/slide/mobile-3.webp
+        link: /assets/slide/mobile-3.jpg
       introduce:
         position: right
         title: Actions
         subtitle: To learn to be just and constant, not just is sui Hui, not constant retreat
         white_title: true
         button_title: Read more
-        button_url: /
+        button_link: /
 ########################### Slide ########################### > end
+
+
+########################### Home Section ########################### > start
+section:
+  for_home: []
+  library:
+    # --------------- Section -> Library -> Kernel Banner --------------- > start
+    # 网站的核心信息组件
+    kernel_banner:
+      badge: declaration #标语的徽标，为空不显示
+      title:
+        - Light tomorrow with today.
+        - Time is that we do not come loose.
+        # - 这是没有显示出来的第三行标题，支持多行标题，不建议超过三行
+      subtitle:
+        - A friend is one of the nicest things you can have, and one of the best things you can be.
+        - Friendship is a sheltering tree.
+        # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
+      button:
+        style: # 按钮的样式风格
+        title: Learn more # 按钮的标题，同按钮链接一样，为空则不显示按钮
+        link: / # 按钮的链接，同按钮标题一样，为空则不显示按钮
+    # --------------- Section -> Library -> Kernel Banner --------------- > end
+
+########################### Home Section ########################### > end

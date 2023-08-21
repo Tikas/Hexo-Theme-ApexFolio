@@ -5,25 +5,25 @@ if theme.slide.enable
         .swiper-slide
           picture
             //- 奇怪，怎么从大到小写会无法显示？
-            if item.mobile_img.avif_url !== ''
-              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.avif_url) type='image/avif')
-            if item.mobile_img.webp_url !== ''
-              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.webp_url) type='image/webp')
-            if item.mobile_img.url !== ''
-              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.url))
+            if item.mobile_img.avif_link !== ''
+              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.avif_link) type='image/avif')
+            if item.mobile_img.webp_link !== ''
+              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.webp_link) type='image/webp')
+            if item.mobile_img.link !== ''
+              source(media='(max-width: 768px)' srcset=url_for(item.mobile_img.link))
 
-            if item.tablet_img.avif_url !== ''
-              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.avif_url) type='image/avif')
-            if item.tablet_img.webp_url !== ''
-              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.webp_url) type='image/webp')
-            if item.tablet_img.url !== ''
-              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.url))
+            if item.tablet_img.avif_link !== ''
+              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.avif_link) type='image/avif')
+            if item.tablet_img.webp_link !== ''
+              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.webp_link) type='image/webp')
+            if item.tablet_img.link !== ''
+              source(media='(max-width: 1024px)' srcset=url_for(item.tablet_img.link))
 
-            if item.desktop_img.avif_url !== ''
-              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.avif_url) type='image/avif')
-            if item.desktop_img.webp_url !== ''
-              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.webp_url) type='image/webp')
-            if item.desktop_img.img_url !== ''
-              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.url))
+            if item.desktop_img.avif_link !== ''
+              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.avif_link) type='image/avif')
+            if item.desktop_img.webp_link !== ''
+              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.webp_link) type='image/webp')
+            if item.desktop_img.img_link !== ''
+              source(media='(min-width: 1025px)' srcset=url_for(item.desktop_img.link))
 
-            img.swiper-img(src=url_for(item.desktop_img.url) alt=item.introduce.title)
+            img.swiper-img(src=url_for(item.desktop_img.link) alt=item.introduce.title)
