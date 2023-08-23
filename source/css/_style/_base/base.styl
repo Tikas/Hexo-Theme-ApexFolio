@@ -1,5 +1,6 @@
 :root
   --color-text: $color-text
+  --global-container ($layout-width)
 
 ::-webkit-scrollbar
   width 6px
@@ -9,7 +10,7 @@
   border-radius 8px
   cursor pointer
   &:hover
-    opacity 1
+    background #636C78
 ::-webkit-scrollbar-track
   background-color transparent
 
@@ -22,16 +23,18 @@ html
   line-height 1.25
   -webkit-text-size-adjust 100%
   text-size-adjust 100%
+  overflow-y scroll
 
 body
   margin 0
+  box-sizing border-box
+  overflow hidden
+  -ms-overflow-style none
+  -webkit-font-smoothing antialiased
+  scroll-behavior smooth
 
 main
   display block
-
-h1
-  font-size 2em
-  margin .67em 0
 
 hr
   box-sizing content-box
@@ -164,3 +167,8 @@ template
 
 [hidden]
   display none
+
+.container
+  max-width var(--global-container)
+  width 90%
+  margin 0 auto

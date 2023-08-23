@@ -53,7 +53,7 @@ imagesloaded:
 
 ########################### Slide ########################### > start
 # 启用后，本地的 slide js 和 css 将会在 cdn 加载出错时调用，请确保 slide 里的 js 和 css 有设置
-swiper_cdnjs:
+swiper_cdn:
   enable: true
   js:
     src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
@@ -64,8 +64,8 @@ swiper_cdnjs:
 
 slide:
   enable: true
-  js: /js/swiper-bundle.min.js # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper js
-  css: /css/swiper-bundle.min.css # 当 swiper_cdnjs 开启时，只有出错时才会加载本地 swiper css
+  js: /js/swiper-bundle.min.js # 当 swiper_cdn 开启时，只有出错时才会加载本地 swiper js
+  css: /css/swiper-bundle.min.css # 当 swiper_cdn 开启时，只有出错时才会加载本地 swiper css
   wrapper:
     # TODO: 后续有时间实现 introduce
     # 第一组
@@ -88,7 +88,7 @@ slide:
         subtitle: Wit once bought is worth twice taught
         white_title: false
         button:
-          style:
+          style: primary # 按钮的样式风格
           text: Read more
           link: /
     # 第二组
@@ -111,7 +111,7 @@ slide:
         subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
         white_title: false
         button:
-          style:
+          style: primary # 按钮的样式风格
           text: 点击查看
           link: /
     # 第三组
@@ -134,30 +134,49 @@ slide:
         subtitle: To learn to be just and constant, not just is sui Hui, not constant retreat
         white_title: true
         button:
-          style:
+          style: primary # 按钮的样式风格
           text: Read more
           link: /
 ########################### Slide ########################### > end
 
 
 ########################### Home Section ########################### > start
+# 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
+simple_parallax:
+  cdn:
+    enable: true # 启用后，本地的 simpleParallax js 和 css 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
+      integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
+  local:
+    js: /js/simpleParallax.min.js
+
 section:
-  for_home: []
+  for_home: [kernel_banner]
+  use_simple_parallax: true # true 为使用 simpleParallax 视差效果，false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
     # 网站的核心信息组件
     kernel_banner:
+      white_font: false #字体颜色，false 为黑色，true 为白色
+      # banner 的背景，建议使用渐变颜色，示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
+      background_image: 'linear-gradient(180deg, #fdfcfb 0%, #ebedee 100%)'
       badge: declaration #标语的徽标，为空不显示
       title:
         - Light tomorrow with today.
         - Time is that we do not come loose.
         # - 这是没有显示出来的第三行标题，支持多行标题，不建议超过三行
-      subtitle:
+      description:
         - A friend is one of the nicest things you can have, and one of the best things you can be.
         - Friendship is a sheltering tree.
         # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
+      img: # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
+        avif_link: /assets/slide/3.avif
+        webp_link: /assets/slide/3.webp
+        link: /assets/slide/3.jpg
+        alt: banner image
       button:
-        style: # 按钮的样式风格
+        style: primary # 按钮的样式风格
         text: Learn more # 按钮的文本，同按钮链接一样，为空则不显示按钮
         link: / # 按钮的链接，同按钮文本一样，为空则不显示按钮
     # --------------- Section -> Library -> Kernel Banner --------------- > end

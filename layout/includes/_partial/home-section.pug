@@ -1,0 +1,6 @@
+if theme.section.for_home.length > 0
+  each value in theme.section.for_home
+    //- TODO: 后续尝试改成传递参数方式去复用代码
+    case value
+      when 'kernel_banner'
+        !=partial('includes/_partial/section/kernel-banner.pug', {}, {cache: true})

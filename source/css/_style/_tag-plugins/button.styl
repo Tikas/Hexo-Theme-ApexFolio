@@ -1,0 +1,34 @@
+.primary-button
+  display inline-block
+  padding 0.75rem 1.5rem
+  border-radius 3rem
+  font-size 1rem
+  text-decoration none
+  white-space nowrap
+  cursor pointer
+  transition ease-in-out 0.3s
+  &:focus,
+  &:active
+    outline none
+    box-shadow 0 0 0 2px #678
+  &.white
+    background white
+    color black
+    &:hover
+      background black
+      color white
+  &.black
+    background black
+    color white
+    &:hover
+      background white
+      color black
+
+@media screen and (max-width: 768px)
+  .primary-button
+    padding 0.625rem 1.25rem
+    font-size 0.875rem
+
+@media (hover: none)
+  .primary-button
+    background-color #ff7f50

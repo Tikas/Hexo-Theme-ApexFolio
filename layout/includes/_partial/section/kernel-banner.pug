@@ -1,0 +1,41 @@
+//- 把 section-banner 的 css 单独列出，以方便复用
+//- TODO: 改成 pug 模板复用，后续来学习如何复用
+//- 请注意：
+//- fontColor 是字体显示白色还是黑色使用，由于 banner 有按钮，按钮里也会有它。
+//- 此处字体的样式请在 _partial/section-banner.styl 查看
+//- 此处按钮的样式请在 _tag-plugins/button.styl 查看
+
+-
+  let backgroundImage = theme.section.library.kernel_banner.background_image
+    ? 'background-image: ' + theme.section.library.kernel_banner.background_image
+    : ''
+-
+
+section.section-banner(style=backgroundImage)
+  - let fontColor = theme.section.library.kernel_banner.white_font ? 'white' : 'black'
+  .section-banner-info.container
+    if theme.section.library.kernel_banner.badge
+      span.section-badge(class=fontColor)=theme.section.library.kernel_banner.badge
+    h2.section-title(class=fontColor)
+      each itemTitle in theme.section.library.kernel_banner.title
+        =itemTitle
+        br
+    .section-banner-description
+      each itemText in theme.section.library.kernel_banner.description
+        span.description(class=fontColor)=itemText
+    if theme.section.library.kernel_banner.button.text && theme.section.library.kernel_banner.button.link
+      -
+        let buttonStyle = theme.section.library.kernel_banner.button.style
+          ? theme.section.library.kernel_banner.button.style + '-button' + ' ' + fontColor
+          : 'primary-button' + ' ' + fontColor
+      -
+      a(class=buttonStyle href=url_for(theme.section.library.kernel_banner.button.link))
+        =theme.section.library.kernel_banner.button.text
+
+  .section-banner-pic
+    picture
+      if theme.section.library.kernel_banner.img.avif_link !== ''
+        source(srcset=url_for(theme.section.library.kernel_banner.img.avif_link) type='image/avif')
+      if theme.section.library.kernel_banner.img.webp_link !== ''
+        source(srcset=url_for(theme.section.library.kernel_banner.img.webp_link) type='image/webp')
+      img.section-banner-img(src=url_for(theme.section.library.kernel_banner.img.link) alt=theme.section.library.kernel_banner.img.alt)
