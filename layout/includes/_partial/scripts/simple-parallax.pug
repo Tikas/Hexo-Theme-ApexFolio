@@ -1,12 +1,12 @@
 if theme.section.use_simple_parallax
   script.
     function loadSimpleParallaxJS() {
-      const script = document.createElement('script')
-      script.src = '/js/simpleParallax.min.js'
+      const script = document.createElement('script');
+      script.src = '/js/simpleParallax.min.js';
       script.onload = () => {
         initSimpleParallaxConfig()
       }
-      document.body.appendChild(script)
+      document.body.appendChild(script);
     }
     function initSimpleParallaxConfig() {
       new simpleParallax(document.getElementsByClassName('section-banner-img'), {

@@ -1,12 +1,12 @@
 if theme.slide.enable
   script.
     function loadSwiperJS() {
-      const script = document.createElement('script')
-      script.src = '/js/swiper-bundle.min.js'
+      const script = document.createElement('script');
+      script.src = '/js/swiper-bundle.min.js';
       script.onload = () => {
         initSwiperConfig()
       }
-      document.body.appendChild(script)
+      document.body.appendChild(script);
     }
     function initSwiperConfig() {
       let homeSwiper = new Swiper('.home-swiper', {
