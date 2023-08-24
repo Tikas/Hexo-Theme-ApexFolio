@@ -29,9 +29,9 @@ link(rel='stylesheet' href=url_for('/css/style.css'))
 if theme.slide.enable && homePage
   script.
     function loadSwiperCSS() {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = '/css/swiper-bundle.min.css'
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/css/swiper-bundle.min.css';
       document.head.appendChild(link)
     }
   if theme.swiper_cdn.enable && theme.swiper_cdn.css.href !== ''
