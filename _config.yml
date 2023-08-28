@@ -201,17 +201,17 @@ section:
         right:
           background_color: '#F2F2F3'
           img:
-            avif_link: /favicon.ico # /assets/banner/cards-top-left.avif
-            webp_link: /favicon.ico # /assets/banner/cards-top-left.webp
-            link: /favicon.ico # /assets/banner/cards-top-left.png
+            avif_link: /favicon.ico
+            webp_link: /favicon.ico
+            link: /favicon.ico
             alt: banner image
           text:
             enable: true # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
-            white_font: false
+            white_font: false #字体颜色, false 为黑色, true 为白色
       center:
-        enable: false
+        enable: true
       bottom:
         enable: false
         left:
