@@ -6,7 +6,7 @@
 site:
   favicon: /favicon.ico
   logo: /favicon.ico
-  display_title: true #显示站点名称，true 为显示，false 为不显示
+  display_title: true #显示站点名称, true 为显示, false 为不显示
 
 # main menu navigation
 menu:
@@ -32,9 +32,9 @@ mobile_menu_scroll:
 
 # Navigation bar right-side button
 nav_button:
-  enable: true #导航栏右侧按钮总开关，设置 false 为不显示，以下所有按钮开启了也不会显示
+  enable: true #导航栏右侧按钮总开关, 设置 false 为不显示, 以下所有按钮开启了也不会显示
   container:
-    enable: true #在导航栏显示内容按钮，设置 false 为不显示
+    enable: true #在导航栏显示内容按钮, 设置 false 为不显示
     text: Get started
     link: /
 
@@ -42,7 +42,7 @@ nav_button:
 
 
 ########################### imagesloaded ########################### > start
-# TODO：后续学习 JS 后，来运用它，注意：这代码应该改写出 cdn 和内部两块
+# TODO：后续学习 JS 后, 来运用它, 注意：这代码应该改写出 cdn 和内部两块
 imagesloaded:
   enable: false
   js:
@@ -64,21 +64,21 @@ swiper_cdn:
 
 slide:
   enable: true
-  js: /js/swiper-bundle.min.js # 当 swiper_cdn 开启时，只有出错时才会加载本地 swiper js
-  css: /css/swiper-bundle.min.css # 当 swiper_cdn 开启时，只有出错时才会加载本地 swiper css
+  js: /js/swiper-bundle.min.js # 当 swiper_cdn 开启时, 只有出错时才会加载本地 swiper js
+  css: /css/swiper-bundle.min.css # 当 swiper_cdn 开启时, 只有出错时才会加载本地 swiper css
   wrapper:
     # TODO: 后续有时间实现 introduce
     # 第一组
-    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
-    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+    # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P, 2K, 4K 等以便在 PC 电脑上显示
         avif_link: /assets/slide/1.avif
         webp_link: /assets/slide/1.webp
         link: /assets/slide/1.jpg
-      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+      tablet_img: # 建议图片大小是 768x1024, 1024x1336, 1536x2048, 2048x2732 等平板设备的分辨率
         avif_link: /assets/slide/tablet-1.avif
         webp_link: /assets/slide/tablet-1.webp
         link: /assets/slide/tablet-1.jpg
-      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+      mobile_img: # 建议图片大小是 750x1334, 780x1387, 1125x2436, 1242x2208 等移动设备的分辨率
         avif_link: /assets/slide/mobile-1.avif
         webp_link: /assets/slide/mobile-1.webp
         link: /assets/slide/mobile-1.jpg
@@ -86,22 +86,22 @@ slide:
         position: center
         title: Getting
         subtitle: Wit once bought is worth twice taught
-        white_title: false
+        white_font: false
         button:
           style: primary # 按钮的样式风格
           text: Read more
           link: /
     # 第二组
-    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
-    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+    # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P, 2K, 4K 等以便在 PC 电脑上显示
         avif_link: /assets/slide/2.avif
         webp_link: /assets/slide/2.webp
         link: /assets/slide/2.jpg
-      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+      tablet_img: # 建议图片大小是 768x1024, 1024x1336, 1536x2048, 2048x2732 等平板设备的分辨率
         avif_link: /assets/slide/tablet-2.avif
         webp_link: /assets/slide/tablet-2.webp
         link: /assets/slide/tablet-2.jpg
-      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+      mobile_img: # 建议图片大小是 750x1334, 780x1387, 1125x2436, 1242x2208 等移动设备的分辨率
         avif_link: /assets/slide/mobile-2.avif
         webp_link: /assets/slide/mobile-2.webp
         link: /assets/slide/mobile-2.jpg
@@ -109,22 +109,22 @@ slide:
         position: left
         title: 阿甘正传
         subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
-        white_title: false
+        white_font: false
         button:
           style: primary # 按钮的样式风格
           text: 点击查看
           link: /
     # 第三组
-    # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
-    - desktop_img: # 建议图片大小是 1080P，2K，4K 等以便在 PC 电脑上显示
+    # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
+    - desktop_img: # 建议图片大小是 1080P, 2K, 4K 等以便在 PC 电脑上显示
         avif_link: /assets/slide/3.avif
         webp_link: /assets/slide/3.webp
         link: /assets/slide/3.jpg
-      tablet_img: # 建议图片大小是 768x1024，1024x1336，1536x2048，2048x2732 等平板设备的分辨率
+      tablet_img: # 建议图片大小是 768x1024, 1024x1336, 1536x2048, 2048x2732 等平板设备的分辨率
         avif_link: /assets/slide/tablet-3.avif
         webp_link: /assets/slide/tablet-3.webp
         link: /assets/slide/tablet-3.jpg
-      mobile_img: # 建议图片大小是 750x1334，780x1387，1125x2436，1242x2208 等移动设备的分辨率
+      mobile_img: # 建议图片大小是 750x1334, 780x1387, 1125x2436, 1242x2208 等移动设备的分辨率
         avif_link: /assets/slide/mobile-3.avif
         webp_link: /assets/slide/mobile-3.webp
         link: /assets/slide/mobile-3.jpg
@@ -132,7 +132,7 @@ slide:
         position: right
         title: Actions
         subtitle: To learn to be just and constant, not just is sui Hui, not constant retreat
-        white_title: true
+        white_font: true
         button:
           style: primary # 按钮的样式风格
           text: Read more
@@ -144,7 +144,7 @@ slide:
 # 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
 simple_parallax:
   cdn:
-    enable: true # 启用后，本地的 simpleParallax js 和 css 将会在 cdn 加载出错时调用
+    enable: true # 启用后, 本地的 simpleParallax js 和 css 将会在 cdn 加载出错时调用
     js:
       src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
       integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
@@ -152,33 +152,70 @@ simple_parallax:
     js: /js/simpleParallax.min.js
 
 section:
-  for_home: [kernel_banner]
-  use_simple_parallax: true # true 为使用 simpleParallax 视差效果，false 不使用
+  for_home: [kernel, cards]
+  use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
     # 网站的核心信息组件
-    kernel_banner:
-      white_font: false #字体颜色，false 为黑色，true 为白色
-      # banner 的背景，建议使用渐变颜色，示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
+    kernel:
+      white_font: false #字体颜色, false 为黑色, true 为白色
+      # banner 的背景, 建议使用渐变颜色, 示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
       background_image: 'linear-gradient(180deg, #fdfcfb 0%, #ddd9ce 100%)'
-      badge: declaration #标语的徽标，为空不显示
+      badge: declaration #标语的徽标, 为空不显示
       title:
         - Light tomorrow with today.
         - Time is that we do not come loose.
-        # - 这是没有显示出来的第三行标题，支持多行标题，不建议超过三行
+        # - 这是没有显示出来的第三行标题, 支持多行标题, 不建议超过三行
       description:
         - A friend is one of the nicest things you can have, and one of the best things you can be.
         - Friendship is a sheltering tree.
-        # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
-      img: # 图片的 link 为普通的 jpg png gif 等图片格式，link 此值不能为空。avif 和 webp 请专门设置
+        # - 这是没有显示出来的第三行内容文本, 支持多行文本, 不宜过多
+      img: # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
         avif_link: /assets/banner/kernel-banner.avif
         webp_link: /assets/banner/kernel-banner.webp
         link: /assets/banner/kernel-banner.png
         alt: banner image
       button:
         style: primary # 按钮的样式风格
-        text: Learn more # 按钮的文本，同按钮链接一样，为空则不显示按钮
-        link: / # 按钮的链接，同按钮文本一样，为空则不显示按钮
+        text: Learn more # 按钮的文本, 同按钮链接一样, 为空则不显示按钮
+        link: / # 按钮的链接, 同按钮文本一样, 为空则不显示按钮
     # --------------- Section -> Library -> Kernel Banner --------------- > end
+
+    # --------------- Section -> Library -> Cards Banner --------------- > start
+    # 卡片组, 图片尽量选有透明通道的
+    cards:
+      top:
+        enable: true
+        left:
+          background_color: '#F2F2F3'
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
+          img:
+            avif_link: /assets/banner/cards-top-left.avif
+            webp_link: /assets/banner/cards-top-left.webp
+            link: /assets/banner/cards-top-left.png
+            alt: banner image
+        right:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /favicon.ico # /assets/banner/cards-top-left.avif
+            webp_link: /favicon.ico # /assets/banner/cards-top-left.webp
+            link: /favicon.ico # /assets/banner/cards-top-left.png
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false
+      center:
+        enable: false
+      bottom:
+        enable: false
+        left:
+        right:
+    # --------------- Section -> Library -> Cards Banner --------------- > end
 
 ########################### Home Section ########################### > end
