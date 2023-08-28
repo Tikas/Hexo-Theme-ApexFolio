@@ -184,6 +184,7 @@ section:
     # --------------- Section -> Library -> Cards Banner --------------- > start
     # 卡片组, 图片尽量选有透明通道的
     cards:
+      # 卡片组的上面部分
       top:
         enable: true
         left:
@@ -210,6 +211,7 @@ section:
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
+      # 卡片组的中间部分
       center:
         enable: true
         background_color: '#F2F2F3'
@@ -228,10 +230,33 @@ section:
           title: Quality is the goal
           description: A friend is one of the nicest things you can have, and one of the best things you can be.
           white_font: true #字体颜色, false 为黑色, true 为白色
+      # 卡片组的下面部分
       bottom:
-        enable: false
+        enable: true
         left:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /assets/slide/2.avif
+            webp_link: /assets/slide/2.webp
+            link: /assets/slide/2.jpg
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
         right:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /assets/slide/1.avif
+            webp_link: /assets/slide/1.webp
+            link: /assets/slide/1.jpg
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
     # --------------- Section -> Library -> Cards Banner --------------- > end
 
 ########################### Home Section ########################### > end

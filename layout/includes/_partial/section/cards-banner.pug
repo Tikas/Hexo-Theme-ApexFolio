@@ -28,18 +28,18 @@ if theme.section.library.cards.top.enable || theme.section.library.cards.center.
           //- 右
           .cards-box.cards-box-center(style=cardsTopRightBG)
             -
-              let cardsImgHeight =''
-              let cardsImg ='cards-img-box-width'
-              if (theme.section.library.cards.top.right.text.enable) cardsImgHeight = 'cards-img-height'
-              if (theme.section.library.cards.top.right.text.enable) cardsImg = 'cards-img-max-width'
+              let cardsTopRightImgHeight =''
+              let cardsTopRightImg ='cards-img-box-width'
+              if (theme.section.library.cards.top.right.text.enable) cardsTopRightImgHeight = 'cards-top-right-img-height'
+              if (theme.section.library.cards.top.right.text.enable) cardsTopRightImg = 'cards-img-max-width'
             -
-            .cards-img-box(class=cardsImgHeight)
+            .cards-img-box(class=cardsTopRightImgHeight)
               picture
                 if theme.section.library.cards.top.right.img.avif_link
                   source(srcset=url_for(theme.section.library.cards.top.right.img.avif_link) type='image/avif')
                 if theme.section.library.cards.top.right.img.webp_link
                   source(srcset=url_for(theme.section.library.cards.top.right.img.webp_link) type='image/webp')
-                img(class=cardsImg src=url_for(theme.section.library.cards.top.right.img.link) alt=theme.section.library.cards.top.right.img.alt)
+                img(class=cardsTopRightImg src=url_for(theme.section.library.cards.top.right.img.link) alt=theme.section.library.cards.top.right.img.alt)
             if theme.section.library.cards.top.right.text.enable
               - let cardsTopRightFontColor = theme.section.library.cards.top.right.text.white_font ? 'white' : 'black'
               .cards-top-text
@@ -80,3 +80,52 @@ if theme.section.library.cards.top.enable || theme.section.library.cards.center.
                 p.cards-description(class=cardsCenterFontColor)=theme.section.library.cards.top.right.text.description
 
       if theme.section.library.cards.bottom.enable
+        -
+          let cardsBottomLeftBG = theme.section.library.cards.bottom.left.background_color
+            ? 'background: ' + theme.section.library.cards.bottom.left.background_color
+            : ''
+          let cardsBottomRightBG = theme.section.library.cards.bottom.right.background_color
+            ? 'background: ' + theme.section.library.cards.bottom.right.background_color
+            : ''
+        -
+        .cards-bottom
+          //- 左
+          .cards-box.cards-box-center(style=cardsBottomLeftBG)
+            -
+              let cardsBottomLeftImgHeight =''
+              let cardsBottomLeftImg ='cards-img'
+              if (theme.section.library.cards.bottom.left.text.enable) cardsBottomLeftImgHeight = 'cards-bottom-img-height'
+              if (theme.section.library.cards.bottom.left.text.enable) cardsBottomLeftImg = 'cards-img-max-height'
+            -
+            .cards-img-box(class=cardsBottomLeftImgHeight)
+              picture
+                if theme.section.library.cards.bottom.left.img.avif_link
+                  source(srcset=url_for(theme.section.library.cards.bottom.left.img.avif_link) type='image/avif')
+                if theme.section.library.cards.bottom.left.img.webp_link
+                  source(srcset=url_for(theme.section.library.cards.bottom.left.img.webp_link) type='image/webp')
+                img(class=cardsBottomLeftImg src=url_for(theme.section.library.cards.bottom.left.img.link) alt=theme.section.library.cards.bottom.left.img.alt)
+            if theme.section.library.cards.bottom.left.text.enable
+              - let cardsBottomLeftFontColor = theme.section.library.cards.bottom.left.text.white_font ? 'white' : 'black'
+              .cards-top-text
+                h3.cards-title(class=cardsBottomLeftFontColor)=theme.section.library.cards.bottom.left.text.title
+                p.cards-description(class=cardsBottomLeftFontColor)=theme.section.library.cards.bottom.left.text.description
+          //- 右
+          .cards-box.cards-box-center(style=cardsBottomRightBG)
+            -
+              let cardsBottomRightImgHeight =''
+              let cardsBottomRightImg ='cards-img'
+              if (theme.section.library.cards.bottom.right.text.enable) cardsBottomRightImgHeight = 'cards-bottom-img-height'
+              if (theme.section.library.cards.bottom.right.text.enable) cardsBottomRightImg = 'cards-img-max-height'
+            -
+            .cards-img-box(class=cardsBottomRightImgHeight)
+              picture
+                if theme.section.library.cards.bottom.right.img.avif_link
+                  source(srcset=url_for(theme.section.library.cards.bottom.right.img.avif_link) type='image/avif')
+                if theme.section.library.cards.bottom.right.img.webp_link
+                  source(srcset=url_for(theme.section.library.cards.bottom.right.img.webp_link) type='image/webp')
+                img(class=cardsBottomRightImg src=url_for(theme.section.library.cards.bottom.right.img.link) alt=theme.section.library.cards.bottom.right.img.alt)
+            if theme.section.library.cards.bottom.right.text.enable
+              - let cardsBottomLeftFontColor = theme.section.library.cards.bottom.right.text.white_font ? 'white' : 'black'
+              .cards-top-text
+                h3.cards-title(class=cardsBottomLeftFontColor)=theme.section.library.cards.bottom.right.text.title
+                p.cards-description(class=cardsBottomLeftFontColor)=theme.section.library.cards.bottom.right.text.description

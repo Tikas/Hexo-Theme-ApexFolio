@@ -46,12 +46,15 @@
 .cards-img-box
   width 100%
   height 100%
-  &.cards-img-height
+  &.cards-top-right-img-height
     height 50%
+  &.cards-bottom-img-height
+    height 70%
 
 .cards-img,
 .cards-img-box-width,
-.cards-img-max-width
+.cards-img-max-width,
+.cards-img-max-height
   display block
   box-sizing border-box
   margin 0 auto
@@ -67,8 +70,11 @@
 .cards-img-max-width
   padding 1rem
   max-width 20rem
-  max-height 100%
   object-fit contain
+
+.cards-img-max-height
+  max-height 25rem
+  object-fit cover
 
 .cards-center
   margin-top 1.25rem
@@ -104,7 +110,8 @@
     grid-template-columns 3fr 2fr
 
 @media screen and (max-width: 768px)
-  .cards-top
+  .cards-top,
+  .cards-bottom
     grid-template-columns 1fr
   .cards-box
     height 24rem
