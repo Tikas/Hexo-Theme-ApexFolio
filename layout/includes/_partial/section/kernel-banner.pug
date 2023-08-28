@@ -34,8 +34,8 @@ section.section-banner(style=kernelBG)
 
   .section-banner-pic
     picture
-      if theme.section.library.kernel.img.avif_link !== ''
+      if theme.section.library.kernel.img.avif_link
         source(srcset=url_for(theme.section.library.kernel.img.avif_link) type='image/avif')
-      if theme.section.library.kernel.img.webp_link !== ''
+      if theme.section.library.kernel.img.webp_link
         source(srcset=url_for(theme.section.library.kernel.img.webp_link) type='image/webp')
       img.section-banner-img(src=url_for(theme.section.library.kernel.img.link) alt=theme.section.library.kernel.img.alt)

@@ -34,8 +34,8 @@ if theme.slide.enable && homePage
       link.href = '/css/swiper-bundle.min.css';
       document.head.appendChild(link)
     }
-  if theme.swiper_cdn.enable && theme.swiper_cdn.css.href !== ''
-    if theme.swiper_cdn.css.integrity !== ''
+  if theme.swiper_cdn.enable && theme.swiper_cdn.css.href
+    if theme.swiper_cdn.css.integrity
       link(rel='stylesheet' href=url_for(theme.swiper_cdn.css.href) integrity=theme.swiper_cdn.css.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
     else
       link(rel='stylesheet' href=url_for(theme.swiper_cdn.css.href) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')

@@ -20,8 +20,8 @@ if theme.section.use_simple_parallax
     }
 
   //- import simpleParallax js
-  if theme.simple_parallax.cdn.enable && theme.simple_parallax.cdn.js.src !== ''
-    if theme.simple_parallax.cdn.js.integrity !== ''
+  if theme.simple_parallax.cdn.enable && theme.simple_parallax.cdn.js.src
+    if theme.simple_parallax.cdn.js.integrity
       script(src=url_for(theme.simple_parallax.cdn.js.src) integrity=theme.simple_parallax.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSimpleParallaxJS()' onload='initSimpleParallaxConfig()')
     else
       script(src=url_for(theme.simple_parallax.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSimpleParallaxJS()' onload='initSimpleParallaxConfig()')

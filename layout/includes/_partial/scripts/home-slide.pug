@@ -22,8 +22,8 @@ if theme.slide.enable
     }
 
   //- import swiper js
-  if theme.swiper_cdn.enable && theme.swiper_cdn.js.src !== ''
-    if theme.swiper_cdn.js.integrity !== ''
+  if theme.swiper_cdn.enable && theme.swiper_cdn.js.src
+    if theme.swiper_cdn.js.integrity
       script(src=url_for(theme.swiper_cdn.js.src) integrity=theme.swiper_cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
     else
       script(src=url_for(theme.swiper_cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
