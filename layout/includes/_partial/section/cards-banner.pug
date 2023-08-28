@@ -26,14 +26,20 @@ if theme.section.library.cards.top.enable || theme.section.library.cards.center.
                   source(srcset=url_for(theme.section.library.cards.top.left.img.webp_link) type='image/webp')
                 img.cards-img(src=url_for(theme.section.library.cards.top.left.img.link) alt=theme.section.library.cards.top.left.img.alt)
           //- 右
-          .cards-box.cards-box-right(style=cardsTopRightBG)
-            .cards-img-box.cards-img-height
+          .cards-box.cards-box-center(style=cardsTopRightBG)
+            -
+              let cardsImgHeight =''
+              let cardsImg ='cards-img-box-width'
+              if (theme.section.library.cards.top.right.text.enable) cardsImgHeight = 'cards-img-height'
+              if (theme.section.library.cards.top.right.text.enable) cardsImg = 'cards-img-max-width'
+            -
+            .cards-img-box(class=cardsImgHeight)
               picture
                 if theme.section.library.cards.top.right.img.avif_link
                   source(srcset=url_for(theme.section.library.cards.top.right.img.avif_link) type='image/avif')
                 if theme.section.library.cards.top.right.img.webp_link
                   source(srcset=url_for(theme.section.library.cards.top.right.img.webp_link) type='image/webp')
-                img.cards-img-max-width(src=url_for(theme.section.library.cards.top.right.img.link) alt=theme.section.library.cards.top.right.img.alt)
+                img(class=cardsImg src=url_for(theme.section.library.cards.top.right.img.link) alt=theme.section.library.cards.top.right.img.alt)
             if theme.section.library.cards.top.right.text.enable
               - let cardsTopRightFontColor = theme.section.library.cards.top.right.text.white_font ? 'white' : 'black'
               .cards-top-text

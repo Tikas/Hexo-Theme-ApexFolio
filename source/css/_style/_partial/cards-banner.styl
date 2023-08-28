@@ -1,10 +1,13 @@
 .cards-banner
   padding 7.5rem 0 8.75rem
 
-.cards-top
+.cards-top,
+.cards-bottom
   display grid
   grid-gap 1.25rem
   gap 1.25rem
+
+.cards-top
   grid-template-columns 2fr 1fr
 
 .cards-box
@@ -13,7 +16,7 @@
   flex-direction column
   border-radius 2rem
   overflow hidden
-  &.cards-box-right
+  &.cards-box-center
     justify-content center
 
 .cards-top-text
@@ -47,6 +50,7 @@
     height 50%
 
 .cards-img,
+.cards-img-box-width,
 .cards-img-max-width
   display block
   box-sizing border-box
@@ -56,6 +60,9 @@
 
 .cards-img
   object-fit cover
+
+.cards-img-box-width
+  object-fit contain
 
 .cards-img-max-width
   padding 1rem
@@ -74,6 +81,10 @@
   max-width 48rem
   bottom 8%
   left calc(5% * 2 / 3)
+
+.cards-bottom
+  margin-top 1.25rem
+  grid-template-columns 1fr 1fr
 
 @media screen and (max-width: 1200px)
   .cards-box
