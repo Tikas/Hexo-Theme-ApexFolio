@@ -1,7 +1,6 @@
 if theme.section.library.cards.top.enable || theme.section.library.cards.center.enable || theme.section.library.cards.bottom.enable
   section.cards-banner
     .container
-
       if theme.section.library.cards.top.enable
         -
           let cardsTopLeftBG = theme.section.library.cards.top.left.background_color
@@ -48,7 +47,30 @@ if theme.section.library.cards.top.enable || theme.section.library.cards.center.
             : ''
         -
         .cards-center
-          .cards-box(style=cardsCenterBG)
+          .cards-box.cards-center-box(style=cardsCenterBG)
+            //- 图片
             .cards-img-box
+              picture
+                if theme.section.library.cards.center.img.mobile_img.avif_link
+                  source(media='(max-width: 500px)' srcset=url_for(theme.section.library.cards.center.img.mobile_img.avif_link) type='image/avif')
+                if theme.section.library.cards.center.img.mobile_img.webp_link
+                  source(media='(max-width: 500px)' srcset=url_for(theme.section.library.cards.center.img.mobile_img.webp_link) type='image/webp')
+                if theme.section.library.cards.center.img.mobile_img.link
+                  source(media='(max-width: 500px)' srcset=url_for(theme.section.library.cards.center.img.mobile_img.link))
+
+                if theme.section.library.cards.center.img.desktop_img.avif_link
+                  source(media='(min-width: 501px)' srcset=url_for(theme.section.library.cards.center.img.desktop_img.avif_link) type='image/avif')
+                if theme.section.library.cards.center.img.desktop_img.webp_link
+                  source(media='(min-width: 501px)' srcset=url_for(theme.section.library.cards.center.img.desktop_img.webp_link) type='image/webp')
+                if theme.section.library.cards.center.img.desktop_img.img_link
+                  source(media='(min-width: 501px)' srcset=url_for(theme.section.library.cards.center.img.desktop_img.link))
+
+                img.cards-img(src=url_for(theme.section.library.cards.center.img.desktop_img.link) alt=theme.section.library.cards.center.img.alt)
+            //- 文字
+            if theme.section.library.cards.center.text.enable
+              - let cardsCenterFontColor = theme.section.library.cards.center.text.white_font ? 'white' : 'black'
+              .cards-center-text
+                h3.cards-title(class=cardsCenterFontColor)=theme.section.library.cards.top.right.text.title
+                p.cards-description(class=cardsCenterFontColor)=theme.section.library.cards.top.right.text.description
 
       if theme.section.library.cards.bottom.enable

@@ -227,7 +227,7 @@ section:
           enable: true # 是否显示文字 true 为显示, false 为不显示
           title: Quality is the goal
           description: A friend is one of the nicest things you can have, and one of the best things you can be.
-          white_font: false #字体颜色, false 为黑色, true 为白色
+          white_font: true #字体颜色, false 为黑色, true 为白色
       bottom:
         enable: false
         left:

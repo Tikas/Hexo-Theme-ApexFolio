@@ -9,7 +9,7 @@
 
 .cards-box
   display flex
-  height 32rem
+  height 35rem
   flex-direction column
   border-radius 2rem
   overflow hidden
@@ -66,6 +66,15 @@
 .cards-center
   margin-top 1.25rem
 
+.cards-center-box
+  position relative
+
+.cards-center-text
+  position absolute
+  max-width 48rem
+  bottom 8%
+  left calc(5% * 2 / 3)
+
 @media screen and (max-width: 1200px)
   .cards-box
     height 28rem
@@ -89,13 +98,18 @@
   .cards-box
     height 24rem
     border-radius 1.25rem
-  .cards-top-left-text
+  .cards-top-text
     text-align center
+  .cards-center-text
+    text-align center
+    left 5%
 
 @media screen and (max-width: 500px)
   .cards-box
     height 20rem
     border-radius 1rem
+    &.cards-center-box
+      height 35rem
   .cards-title
     font-size 1.75rem
     line-height 1.875rem
