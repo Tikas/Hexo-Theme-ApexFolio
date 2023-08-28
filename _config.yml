@@ -152,7 +152,7 @@ simple_parallax:
     js: /js/simpleParallax.min.js
 
 section:
-  for_home: [kernel, cards]
+  for_home: [kernel, cards, content]
   use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
@@ -258,5 +258,31 @@ section:
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
     # --------------- Section -> Library -> Cards Banner --------------- > end
+
+    # --------------- Section -> Library -> Content Banner --------------- > start
+    # 网站的内容组件
+    content:
+      white_font: true #字体颜色, false 为黑色, true 为白色
+      # banner 的背景, 建议使用渐变颜色, 示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
+      background_image: 'linear-gradient(180deg, #0F6AC1 0%, #002EA0 100%)'
+      badge: declaration #标语的徽标, 为空不显示
+      title:
+        - Light tomorrow with today.
+        - Time is that we do not come loose.
+        # - 这是没有显示出来的第三行标题, 支持多行标题, 不建议超过三行
+      description:
+        - A friend is one of the nicest things you can have, and one of the best things you can be.
+        - Friendship is a sheltering tree.
+        # - 这是没有显示出来的第三行内容文本, 支持多行文本, 不宜过多
+      img: # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
+        avif_link: /assets/banner/kernel-banner.avif
+        webp_link: /assets/banner/kernel-banner.webp
+        link: /assets/banner/kernel-banner.png
+        alt: banner image
+      button:
+        style: primary # 按钮的样式风格
+        text: Learn more # 按钮的文本, 同按钮链接一样, 为空则不显示按钮
+        link: / # 按钮的链接, 同按钮文本一样, 为空则不显示按钮
+    # --------------- Section -> Library -> Kernel Banner --------------- > end
 
 ########################### Home Section ########################### > end
