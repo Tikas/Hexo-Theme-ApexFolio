@@ -160,7 +160,7 @@ section:
     kernel:
       white_font: false #字体颜色, false 为黑色, true 为白色
       # banner 的背景, 建议使用渐变颜色, 示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
-      background_image: 'linear-gradient(180deg, #fdfcfb 0%, #ddd9ce 100%)'
+      background_image: 'linear-gradient(180deg, #fffefe 0%, #efebe2 100%)'
       badge: declaration #标语的徽标, 为空不显示
       title:
         - Light tomorrow with today.
@@ -264,7 +264,7 @@ section:
     content:
       white_font: true #字体颜色, false 为黑色, true 为白色
       # banner 的背景, 建议使用渐变颜色, 示例：'linear-gradient(180deg, 颜色hex 0%, 颜色hex 100%)'
-      background_image: 'linear-gradient(180deg, #0F6AC1 0%, #002EA0 100%)'
+      background_image: 'linear-gradient(180deg, #434343 0%, #161718 100%)'
       badge: declaration #标语的徽标, 为空不显示
       title:
         - Light tomorrow with today.
@@ -275,9 +275,9 @@ section:
         - Friendship is a sheltering tree.
         # - 这是没有显示出来的第三行内容文本, 支持多行文本, 不宜过多
       img: # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
-        avif_link: /assets/banner/kernel-banner.avif
-        webp_link: /assets/banner/kernel-banner.webp
-        link: /assets/banner/kernel-banner.png
+        avif_link: /assets/banner/content-banner.avif
+        webp_link: /assets/banner/content-banner.webp
+        link: /assets/banner/content-banner.png
         alt: banner image
       button:
         style: primary # 按钮的样式风格
