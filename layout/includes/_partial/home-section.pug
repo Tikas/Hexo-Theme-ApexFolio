@@ -4,7 +4,7 @@ if theme.section.for_home.length > 0
     case value
       when 'kernel'
         !=partial('includes/_partial/section/kernel-banner.pug', {}, {cache: true})
-      when 'cards'
-        !=partial('includes/_partial/section/cards-banner.pug', {}, {cache: true})
+      when 'kernel_cards'
+        !=partial('includes/_partial/section/kernel-cards-banner.pug', {}, {cache: true})
       when 'content'
         !=partial('includes/_partial/section/content-banner.pug', {}, {cache: true})

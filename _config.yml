@@ -170,7 +170,7 @@ simple_parallax:
     js: /js/simpleParallax.min.js
 
 section:
-  for_home: [kernel, cards, content]
+  for_home: [kernel, kernel_cards, content]
   use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
@@ -201,7 +201,7 @@ section:
 
     # --------------- Section -> Library -> Cards Banner --------------- > start
     # 卡片组, 图片尽量选有透明通道的
-    cards:
+    kernel_cards:
       # 卡片组的上面部分
       top:
         enable: true
