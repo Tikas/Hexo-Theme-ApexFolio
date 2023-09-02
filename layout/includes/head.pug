@@ -24,6 +24,12 @@ meta(name ='format-detection' content='telephone=no')
 
 !=favicon_tag(theme.site.favicon || config.favicon)
 
+//- 预解析
+if theme.preconnect
+  each url in theme.preconnect
+    link(rel="dns-prefetch" href=url)
+    link(rel="preconnect" href=url)
+
 link(rel='stylesheet' href=url_for('/css/style.css'))
 
 if theme.slide.enable && homePage
@@ -42,3 +48,7 @@ if theme.slide.enable && homePage
   else
     link(rel='stylesheet' href=url_for(theme.slide.css))
 
+//- 插入头部代码
+if theme.inject.head
+  each item in theme.inject.head
+    !=item

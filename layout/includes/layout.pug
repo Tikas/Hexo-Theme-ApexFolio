@@ -35,3 +35,8 @@ html
 
     else
       include ./404.pug
+
+    //- 插入尾部代码
+    if theme.inject.bottom
+      each item in theme.inject.bottom
+        !=item
