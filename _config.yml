@@ -170,7 +170,7 @@ simple_parallax:
     js: /js/simpleParallax.min.js
 
 section:
-  for_home: [kernel, kernel_cards, content]
+  for_home: [kernel, kernel_cards, content, content_cards]
   use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
@@ -302,5 +302,83 @@ section:
         text: Learn more # 按钮的文本, 同按钮链接一样, 为空则不显示按钮
         link: / # 按钮的链接, 同按钮文本一样, 为空则不显示按钮
     # --------------- Section -> Library -> Kernel Banner --------------- > end
+
+    # --------------- Section -> Library -> Cards Banner --------------- > start
+    # 卡片组, 图片尽量选有透明通道的
+    content_cards:
+      # 卡片组的上面部分
+      top:
+        enable: true
+        left:
+          background_color: '#F2F2F3'
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
+          img:
+            avif_link: /assets/banner/cards-top-left.avif
+            webp_link: /assets/banner/cards-top-left.webp
+            link: /assets/banner/cards-top-left.png
+            alt: banner image
+        right:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /favicon.ico
+            webp_link: /favicon.ico
+            link: /favicon.ico
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
+      # 卡片组的中间部分
+      center:
+        enable: true
+        background_color: '#F2F2F3'
+        img:
+          desktop_img:
+            avif_link: /assets/slide/3.avif
+            webp_link: /assets/slide/3.webp
+            link: /assets/slide/3.jpg
+          mobile_img:
+            avif_link: /assets/slide/mobile-3.avif
+            webp_link: /assets/slide/mobile-3.webp
+            link: /assets/slide/mobile-3.jpg
+          alt: banner image
+        text:
+          enable: true # 是否显示文字 true 为显示, false 为不显示
+          title: Quality is the goal
+          description: A friend is one of the nicest things you can have, and one of the best things you can be.
+          white_font: true #字体颜色, false 为黑色, true 为白色
+      # 卡片组的下面部分
+      bottom:
+        enable: true
+        left:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /assets/slide/2.avif
+            webp_link: /assets/slide/2.webp
+            link: /assets/slide/2.jpg
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
+        right:
+          background_color: '#F2F2F3'
+          img:
+            avif_link: /assets/slide/1.avif
+            webp_link: /assets/slide/1.webp
+            link: /assets/slide/1.jpg
+            alt: banner image
+          text:
+            enable: true # 是否显示文字 true 为显示, false 为不显示
+            title: Quality is the goal
+            description: A friend is one of the nicest things you can have, and one of the best things you can be.
+            white_font: false #字体颜色, false 为黑色, true 为白色
+    # --------------- Section -> Library -> Cards Banner --------------- > end
 
 ########################### Home Section ########################### > end
