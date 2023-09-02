@@ -27,8 +27,8 @@ mobile_menu:
 # mobile menu scroll, If not enabled, please set enable to false
 mobile_menu_scroll:
   enable: true
-  before: /assets/menu_scroll_before.webp
-  after: /assets/menu_scroll_after.webp
+  before: /assets/nav/menu-scroll-before.webp
+  after: /assets/nav/menu-scroll-after.webp
 
 # Navigation bar right-side button
 nav_button:
