@@ -1,0 +1,133 @@
+#footer
+  margin-top auto
+  color #ccc
+  background-color #232425
+
+.footer
+  padding 2rem 0
+
+.footer-columns
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  gap 4rem 1rem
+  padding 3rem 0
+
+.footer-drop,
+.footer-group
+  margin-top 1rem
+
+.footer-group
+  padding 0
+  text-decoration none
+
+.footer-title
+  flex-basis 40%
+
+.footer-drop
+  margin-bottom 2rem
+
+.footer-title,
+.footer-site-title
+  font-weight 600
+  color #fff
+  user-select none
+
+.footer-title
+  font-size 1.5rem
+
+.footer-site-title
+  font-size 2.25rem
+
+.footer-description,
+.footer-link
+  line-height 1.5em
+
+.footer-link
+  display block
+  margin-block-start 1em
+  margin-block-end 0
+  margin-inline-start 0
+  margin-inline-end 0
+  overflow hidden
+  white-space nowrap
+  text-decoration none
+  color #ccc
+  &:hover
+    color #fff
+
+.footer-top-line
+  border-top 1px solid hsla(0,0%,100%,0.2)
+
+.footer-copyright,
+.footer-links
+  font-weight normal
+  font-size 0.875rem
+  line-height 1.25rem
+  letter-spacing -0.15px
+
+.footer-links-item
+  display inline-block
+  margin-right 0.75rem
+  text-decoration none
+  color #ccc
+  &:hover
+    color #fff
+
+@media screen and (min-width: 320px)
+  .footer-columns
+    gap 2.25rem 0.5rem
+  .footer-site
+    &.footer-group-one,
+    &.footer-group-two,
+    &.footer-group-three,
+    &.footer-group-four
+      flex-basis 100%
+  .footer-description
+    padding-right 0
+  .footer-group
+    flex-basis 10rem
+
+@media screen and (min-width: 768px)
+  .footer-columns
+    gap 2.5rem 0.65rem
+  .footer-site
+    &.footer-group-one
+      flex-basis 60%
+  .footer-description
+    padding-right 1rem
+  .footer-group
+    flex-basis 11rem
+
+@media screen and (min-width: 1000px)
+  .footer-columns
+    gap 2.75rem 0.8rem
+  .footer-site
+    &.footer-group-two
+      flex-basis 40%
+  .footer-description
+    padding-right 2rem
+  .footer-group
+    flex-basis 12rem
+
+@media screen and (min-width: 1200px)
+  .footer-columns
+    gap 3rem 0.85rem
+  .footer-site
+    &.footer-group-three
+      flex-basis 35%
+  .footer-description
+    padding-right 3rem
+  .footer-group
+    flex-basis 13rem
+
+@media screen and (min-width: 1400px)
+  .footer-columns
+    gap 3.5rem 1rem
+  .footer-site
+    &.footer-group-four
+      flex-basis 30%
+  .footer-description
+    padding-right 4rem
+  .footer-group
+    flex-basis 13.75rem

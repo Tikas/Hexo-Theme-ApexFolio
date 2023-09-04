@@ -382,3 +382,50 @@ section:
     # --------------- Section -> Library -> Cards Banner --------------- > end
 
 ########################### Home Section ########################### > end
+
+
+########################### Footer ########################### > end
+footer:
+  site:
+    enable: true # 是否开启网站介绍信息, true 为启用, false 为不启用
+    title: # 不设置则显示 hexo 配置文件的 title
+    description: # 不设置则显示 hexo 配置文件的 description
+  list_group:
+    - list_title: Who we are
+      item:
+        - text: About Us
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+        - text: FAQ
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+        - text: Contact Us
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+    - list_title: Who we are
+      item:
+        - text: About Us
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+        - text: FAQ
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+        - text: Contact Us
+          link: /
+          open: in # in 为原窗口打开, out 为新窗口打开
+  copyright: Copyright © 2008 - 2023 Apexfolio. All rights reserved.
+  links:
+    - text: Privacy Policy
+      link: /
+      open: in # in 为原窗口打开, out 为新窗口打开
+      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+    - text: Terms of Use
+      link: /
+      open: in # in 为原窗口打开, out 为新窗口打开
+      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+    - text: Cookies
+      link: /
+      open: in # in 为原窗口打开, out 为新窗口打开
+      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+
+########################### Footer ########################### > end
