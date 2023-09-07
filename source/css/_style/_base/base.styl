@@ -1,6 +1,7 @@
 :root
-  --color-text: $color-text
+  --color-text ($color-text)
   --global-container ($layout-width)
+  --nav-height ($nav-height)
 
 ::-webkit-scrollbar
   width 6px
@@ -175,3 +176,6 @@ template
   max-width var(--global-container)
   width 90%
   margin 0 auto
+
+.nav-height
+  height var(--nav-height)
