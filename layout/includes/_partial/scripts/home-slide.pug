@@ -2,7 +2,7 @@ if theme.slide.enable
   script.
     function loadSwiperJS() {
       const script = document.createElement('script');
-      script.src = '#{theme.slide.js}';
+      script.src = '#{theme.swiper.local.js}';
       script.onload = () => {
         initSwiperConfig()
       }
@@ -22,10 +22,10 @@ if theme.slide.enable
     }
 
   //- import swiper js
-  if theme.swiper_cdn.enable && theme.swiper_cdn.js.src
-    if theme.swiper_cdn.js.integrity
-      script(src=url_for(theme.swiper_cdn.js.src) integrity=theme.swiper_cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
+  if theme.swiper.cdn.enable && theme.swiper.cdn.js.src
+    if theme.swiper.cdn.js.integrity
+      script(src=url_for(theme.swiper.cdn.js.src) integrity=theme.swiper.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
     else
-      script(src=url_for(theme.swiper_cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
+      script(src=url_for(theme.swiper.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperJS()' onload='initSwiperConfig()')
   else
-    script(src=url_for(theme.slide.js) onload='initSwiperConfig()')
+    script(src=url_for(theme.swiper.local.js) onload='initSwiperConfig()')

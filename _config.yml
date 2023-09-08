@@ -59,31 +59,46 @@ nav_button:
 ########################### Navigation Bar ########################### > end
 
 
-########################### imagesloaded ########################### > start
-# TODO：后续学习 JS 后, 来运用它, 注意：这代码应该改写出 cdn 和内部两块
+########################### Import ########################### > start
+# TODO：这个不要使用，后续可能会配合全局 loading，目前功能缺失
 imagesloaded:
-  enable: false
-  js:
-    src: https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js
-    integrity: sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==
-########################### imagesloaded ########################### > end
+  cdn:
+    enable: false
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js
+      integrity: sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==
+  local:
+    js:
+
+# slide 功能的依赖
+swiper:
+  cdn:
+    enable: true # 启用后, 本地的 swiper js 和 css 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
+      integrity: sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==
+    css:
+      href: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css
+      integrity: sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==
+  local:
+    js: /js/swiper-bundle.min.js
+    css: /css/swiper-bundle.min.css
+
+# 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
+simple_parallax:
+  cdn:
+    enable: true # 启用后, 本地的 simpleParallax js 和 css 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
+      integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
+  local:
+    js: /js/simpleParallax.min.js
+########################### Import ########################### > end
 
 
 ########################### Slide ########################### > start
-# 启用后，本地的 slide js 和 css 将会在 cdn 加载出错时调用，请确保 slide 里的 js 和 css 有设置
-swiper_cdn:
-  enable: true
-  js:
-    src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
-    integrity: sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==
-  css:
-    href: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css
-    integrity: sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==
-
 slide:
   enable: true
-  js: /js/swiper-bundle.min.js # 当 swiper_cdn 开启时, 只有出错时才会加载本地 swiper js
-  css: /css/swiper-bundle.min.css # 当 swiper_cdn 开启时, 只有出错时才会加载本地 swiper css
   wrapper:
     # TODO: 后续有时间实现 introduce
     # 第一组
@@ -159,16 +174,6 @@ slide:
 
 
 ########################### Home Section ########################### > start
-# 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
-simple_parallax:
-  cdn:
-    enable: true # 启用后, 本地的 simpleParallax js 和 css 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
-      integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
-  local:
-    js: /js/simpleParallax.min.js
-
 section:
   for_home: [kernel, kernel_cards, content, content_cards]
   use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
@@ -384,7 +389,7 @@ section:
 ########################### Home Section ########################### > end
 
 
-########################### Footer ########################### > end
+########################### Footer ########################### > start
 footer:
   site:
     enable: true # 是否开启网站介绍信息, true 为启用, false 为不启用

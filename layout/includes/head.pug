@@ -37,16 +37,16 @@ if theme.slide.enable && homePage
     function loadSwiperCSS() {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = '#{theme.slide.css}';
+      link.href = '#{theme.swiper.local.css}';
       document.head.appendChild(link)
     }
-  if theme.swiper_cdn.enable && theme.swiper_cdn.css.href
-    if theme.swiper_cdn.css.integrity
-      link(rel='stylesheet' href=url_for(theme.swiper_cdn.css.href) integrity=theme.swiper_cdn.css.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
+  if theme.swiper.cdn.enable && theme.swiper.cdn.css.href
+    if theme.swiper.cdn.css.integrity
+      link(rel='stylesheet' href=url_for(theme.swiper.cdn.css.href) integrity=theme.swiper.cdn.css.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
     else
-      link(rel='stylesheet' href=url_for(theme.swiper_cdn.css.href) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
+      link(rel='stylesheet' href=url_for(theme.swiper.cdn.css.href) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadSwiperCSS()')
   else
-    link(rel='stylesheet' href=url_for(theme.slide.css))
+    link(rel='stylesheet' href=url_for(theme.swiper.local.css))
 
 //- 插入头部代码
 if theme.inject.head
