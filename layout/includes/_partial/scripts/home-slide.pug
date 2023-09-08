@@ -2,7 +2,7 @@ if theme.slide.enable
   script.
     function loadSwiperJS() {
       const script = document.createElement('script');
-      script.src = '/js/swiper-bundle.min.js';
+      script.src = '#{theme.slide.js}';
       script.onload = () => {
         initSwiperConfig()
       }

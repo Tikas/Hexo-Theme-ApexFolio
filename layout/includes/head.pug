@@ -37,7 +37,7 @@ if theme.slide.enable && homePage
     function loadSwiperCSS() {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = '/css/swiper-bundle.min.css';
+      link.href = '#{theme.slide.css}';
       document.head.appendChild(link)
     }
   if theme.swiper_cdn.enable && theme.swiper_cdn.css.href

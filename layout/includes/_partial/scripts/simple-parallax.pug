@@ -2,7 +2,7 @@ if theme.section.use_simple_parallax
   script.
     function loadSimpleParallaxJS() {
       const script = document.createElement('script');
-      script.src = '/js/simpleParallax.min.js';
+      script.src = '#{theme.simple_parallax.local.js}';
       script.onload = () => {
         initSimpleParallaxConfig()
       }
