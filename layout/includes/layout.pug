@@ -1,7 +1,7 @@
 - var homePage = is_home() && page.prev == 0
 
 doctype html
-html
+html(lang=config.language)
   head
     include ./head.pug
   body
@@ -14,19 +14,17 @@ html
       if homePage && theme.slide.enable
         include ./_partial/slide.pug
 
-      main
-        if body
-          div!= body
-        else
-          if homePage
-            //- 加载首页各板块
-            include ./_partial/home-section.pug
-
-          block content
-
-      footer#footer
-        //- !=partial('includes/footer', {}, {cache: true})
-        !=partial('includes/footer', {},)
+      .showcase
+        main
+          if body
+            div!= body
+          else
+            if homePage
+              //- 加载首页各板块
+              include ./_partial/home-section.pug
+            block content
+        footer#footer
+          !=partial('includes/footer', {}, {cache: true})
 
       include ./_partial/scripts/fullscreen-menu.pug
 

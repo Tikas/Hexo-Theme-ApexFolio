@@ -22,16 +22,17 @@ case footerListGroupLength
           p.footer-description=footerSiteDescription
     if footerListGroupLength > 0
       each value in theme.footer.list_group
-        ul.footer-group(class=footerListGroupLengthClass)
+        .footer-group(class=footerListGroupLengthClass)
           .footer-title=value.list_title
-          li.footer-link
-            each item in value.item
-              if item.open == 'in'
-                a.footer-link(href=`${item.link}`)=item.text
-              else if item.open == 'out'
-                a.footer-link(target='_blank', href=`${item.link}`)=item.text
-              else
-                a.footer-link(href=`${item.link}`)=item.text
+          ul.footer-table
+            li.footer-link
+              each item in value.item
+                if item.open == 'in'
+                  a.footer-link(href=`${item.link}`)=item.text
+                else if item.open == 'out'
+                  a.footer-link(target='_blank', href=`${item.link}`)=item.text
+                else
+                  a.footer-link(href=`${item.link}`)=item.text
 
   .footer-columns.footer-top-line
     .footer-copyright
