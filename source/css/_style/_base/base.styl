@@ -2,6 +2,7 @@
   --color-text ($color-text)
   --global-container ($layout-width)
   --nav-height ($nav-height)
+  --color-site-bg ($color-site-bg)
 
 ::-webkit-scrollbar
   width 6px
@@ -36,6 +37,7 @@ body
   -ms-overflow-style none
   -webkit-font-smoothing antialiased
   scroll-behavior smooth
+  background-color var(--color-site-bg)
 
 main
   display block
@@ -178,4 +180,7 @@ template
   margin 0 auto
 
 .nav-height
-  height var(--nav-height)
+  padding-top var(--nav-height)
+
+.showcase
+  background-color var(--color-site-bg)
