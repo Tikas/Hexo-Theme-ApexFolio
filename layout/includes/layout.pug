@@ -32,6 +32,9 @@ html(lang=config.language)
         include ./_partial/scripts/home-slide.pug
         include ./_partial/scripts/simple-parallax.pug
 
+      if page.open == true
+        include ./_partial/scripts/open-wrap.pug
+
     else
       include ./404.pug
 

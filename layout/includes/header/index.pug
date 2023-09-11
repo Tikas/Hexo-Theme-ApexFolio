@@ -1,2 +1,6 @@
 header
   !=partial('includes/header/nav', {}, {cache: true})
+  if page.open == true
+    include ./open-wrap.pug
+  else
+    include ./not-open-wrap.pug

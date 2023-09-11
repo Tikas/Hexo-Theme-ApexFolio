@@ -9,7 +9,7 @@ site:
 # DNS 预解析 dns-prefetch preconnect
 preconnect:
   - https://cdnjs.cloudflare.com/
-  - https://cdn.jsdelivr.net/
+  # - https://cdn.jsdelivr.net/
   # - https://unpkg.com/
 
 # Inject
@@ -96,7 +96,8 @@ simple_parallax:
 
 lenis:
   cdn:
-    enable: true # true 启用, false 不启用。启用后, 本地的 lenis js 将会在 cdn 加载出错时调用
+    # lenis 使用 jsdelivr 的 cdn 加载会报错，暂时没有找到其他 cdn, 先只加载本地的 js
+    enable: false # true 启用, false 不启用。启用后, 本地的 lenis js 将会在 cdn 加载出错时调用
     js:
       src: https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.22/dist/lenis.min.js
       integrity:

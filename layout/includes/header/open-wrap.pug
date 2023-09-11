@@ -1,0 +1,93 @@
+.full-page-info
+  .container.nav-height
+    .breadcrumb
+      a.breadcrumb-link(href="/") Home
+      span.breadcrumb-span &gt;
+      if page.categories.data.length > 0
+        each item, index in page.categories.data
+          a.breadcrumb-link(href=url_for(item.path), data-pjax-state) #[=item.name]
+    if page.poster
+      .page-poster-info
+        h1.page-poster-title= page.title || _p('untitled')
+        picture
+          if page.poster.avif
+            source(srcset=page.poster.avif, type="image/avif")
+          if page.poster.webp
+            source(srcset=page.poster.webp, type="image/webp")
+          img.page-poster-img(src=page.poster.img alt=page.title)
+        .page-discover-scroll
+          .page-text-alt
+            span.page-text-span Discover
+            svg.page-svg-arrow(width='22px' height='22px' viewBox='0 0 22 22')
+              path(d='M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20v-2z')
+            span.page-text-span Scroll
+    else
+      .page-info
+        div
+          h1.page-title= page.title || _p('untitled')
+          if page.description
+            p.page-description= page.description
+        .page-text-alt
+          span.page-text-span Discover
+          svg.page-svg-arrow(width='22px' height='22px' viewBox='0 0 22 22')
+            path(d='M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20v-2z')
+          span.page-text-span Scroll
+
+.full-page-columns
+  .columns
+    - var groupCount = Math.ceil(page.gallery.length / 3) // 计算每组的数量
+    - var remaining = page.gallery.length % 3 // 计算剩余的图片数量
+    - var currentIndex = 0
+
+    //- 第一个 div
+    .column-wrap
+      .column
+        - var imgCount = 4 // 第一个 div 需要的图片数量
+
+        - for(var j = 0; j < imgCount; j++)
+          - if(currentIndex < page.gallery.length)
+            .column-item
+              picture
+                if page.gallery[currentIndex].avif
+                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                if page.gallery[currentIndex].webp
+                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
+                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+
+              - currentIndex++
+
+    //- 第二个 div
+    .column-wrap
+      .column
+        - var imgCount = 5 // 第二个 div 需要的图片数量
+        - currentIndex = currentIndex - 1 // 让第二组前面重复前面一张
+
+        - for(var j = 0; j < imgCount; j++)
+          - if(currentIndex < page.gallery.length)
+            .column-item
+              picture
+                if page.gallery[currentIndex].avif
+                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                if page.gallery[currentIndex].webp
+                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
+                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+
+              - currentIndex++
+
+    //- 第三个 div
+    .column-wrap
+      .column
+        - var imgCount = page.gallery.length // 全部放在第三个 div，有 12 张图以上为佳
+        - currentIndex = currentIndex - 6 // 此值是前面累计，-6 是从第三图开始排，等于是排除前两张
+
+        - for(var j = 0; j < imgCount; j++)
+          - if(currentIndex < page.gallery.length)
+            .column-item
+              picture
+                if page.gallery[currentIndex].avif
+                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                if page.gallery[currentIndex].webp
+                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
+                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+
+              - currentIndex++

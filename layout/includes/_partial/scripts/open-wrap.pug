@@ -1,0 +1,113 @@
+script.
+  function loadLenisJS() {
+    const script = document.createElement('script');
+    script.src = '#{theme.lenis.local.js}';
+    document.body.appendChild(script);
+  }
+  function loadScrollTriggerJS() {
+    const script = document.createElement('script');
+    script.src = '#{theme.scroll_trigger.local.js}';
+    document.body.appendChild(script);
+  }
+  function loadGsapJS() {
+    const script = document.createElement('script');
+    script.src = '#{theme.gsap.local.js}';
+    document.body.appendChild(script);
+  }
+
+//- import lenis js
+if theme.lenis.cdn.enable && theme.lenis.cdn.js.src
+  if theme.lenis.cdn.js.integrity
+    script(src=url_for(theme.lenis.cdn.js.src) integrity=theme.lenis.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadLenisJS()')
+  else
+    script(src=url_for(theme.lenis.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadLenisJS()')
+else
+  script(src=url_for(theme.lenis.local.js))
+
+//- import GSAP js
+if theme.gsap.cdn.enable && theme.gsap.cdn.js.src
+  if theme.gsap.cdn.js.integrity
+    script(src=url_for(theme.gsap.cdn.js.src) integrity=theme.gsap.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadGsapJS()')
+  else
+    script(src=url_for(theme.gsap.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadGsapJS()')
+else
+  script(src=url_for(theme.gsap.local.js))
+
+//- import ScrollTrigger js
+if theme.scroll_trigger.cdn.enable && theme.scroll_trigger.cdn.js.src
+  if theme.scroll_trigger.cdn.js.integrity
+    script(src=url_for(theme.scroll_trigger.cdn.js.src) integrity=theme.scroll_trigger.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadScrollTriggerJS()')
+  else
+    script(src=url_for(theme.scroll_trigger.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadScrollTriggerJS()')
+else
+  script(src=url_for(theme.scroll_trigger.local.js))
+
+script.
+  var DOM = {
+    sections: {
+      columns: document.querySelector('.full-page-columns'),
+      showcase: document.querySelector('.showcase'),
+    },
+    columns: document.querySelectorAll('.columns'),
+    columnWraps: document.querySelectorAll('.column-wrap'),
+    itemsWrappers: document.querySelectorAll('.column'),
+    items: document.querySelectorAll('.column-item'),
+    images: document.querySelectorAll('.column-item-img'),
+  };
+  //- Lenis
+  function initSmoothScrolling() {
+    var lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  }
+  // GSAP
+  function initScroll() {
+    gsap.timeline({
+        scrollTrigger: {
+            start: 0,
+            end: 'max',
+            scrub: true
+        }
+    })
+    .addLabel('start', 0)
+    .to(DOM.items, {
+        scrollTrigger: {
+            trigger: DOM.sections.showcase,
+            start: 0,
+            end: 'top top',
+            scrub: true
+        },
+        ease: 'power4.inOut',
+        startAt: {
+            opacity: 0,
+        },
+        opacity: 1,
+        yoyo: true,
+        repeat: 1
+    }, 'start')
+    .to(DOM.columnWraps, {
+        ease: 'none',
+        yPercent: function(pos) {
+          return pos * -10 - 10;
+        }
+    }, 'start')
+  }
+  initSmoothScrolling();
+  initScroll();
+
+//- 这个功能暂时不启用，还没想好怎么写此功能
+//- // 预加载图片
+//- const preloadImages = (selector = 'img') => {
+//-   return new Promise((resolve) => {
+//-     imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve);
+//-   });
+//- };
+//- // Preload images
+//- preloadImages().then(function() {
+//-   document.body.classList.remove('loading');
+//-   initSmoothScrolling();
+//-   initScroll();
+//- });
