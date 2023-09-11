@@ -1,4 +1,5 @@
 - var homePage = is_home() && page.prev == 0
+- var pageOpenWrap = page.open == true ? 'showcase' : ''
 
 doctype html
 html(lang=config.language)
@@ -14,17 +15,16 @@ html(lang=config.language)
       if homePage && theme.slide.enable
         include ./_partial/slide.pug
 
-      .showcase
-        main
-          if body
-            div!= body
-          else
-            if homePage
-              //- 加载首页各板块
-              include ./_partial/home-section.pug
-            block content
-        footer#footer
-          !=partial('includes/footer', {}, {cache: true})
+      main(class=pageOpenWrap)
+        if body
+          div!= body
+        else
+          if homePage
+            //- 加载首页各板块
+            include ./_partial/home-section.pug
+          block content
+      footer#footer
+        !=partial('includes/footer', {}, {cache: true})
 
       include ./_partial/scripts/fullscreen-menu.pug
 
