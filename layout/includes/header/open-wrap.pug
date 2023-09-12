@@ -3,9 +3,10 @@
     .breadcrumb
       a.breadcrumb-link(href="/") Home
       span.breadcrumb-span &gt;
-      if page.categories.data.length > 0
-        each item, index in page.categories.data
-          a.breadcrumb-link(href=url_for(item.path), data-pjax-state) #[=item.name]
+      if is_post()
+        if page.categories.data.length > 0
+          each item, index in page.categories.data
+            a.breadcrumb-link(href=url_for(item.path), data-pjax-state) #[=item.name]
     if page.poster
       .page-poster-info
         h1.page-poster-title= page.title || _p('untitled')
