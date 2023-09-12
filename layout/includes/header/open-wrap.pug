@@ -12,10 +12,10 @@
         h1.page-poster-title= page.title || _p('untitled')
         picture
           if page.poster.avif
-            source(srcset=page.poster.avif, type="image/avif")
+            source(srcset=url_for(page.poster.avif), type="image/avif")
           if page.poster.webp
-            source(srcset=page.poster.webp, type="image/webp")
-          img.page-poster-img(src=page.poster.img alt=page.title)
+            source(srcset=url_for(page.poster.webp), type="image/webp")
+          img.page-poster-img(src=url_for(page.poster.img) alt=page.title)
         .page-discover-scroll
           .page-text-alt
             span.page-text-span Discover
@@ -50,10 +50,10 @@
             .column-item
               picture
                 if page.gallery[currentIndex].avif
-                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                  source(srcset=url_for(page.gallery[currentIndex].avif), type="image/avif")
                 if page.gallery[currentIndex].webp
-                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
-                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+                  source(srcset=url_for(page.gallery[currentIndex].webp), type="image/webp")
+                img.column-item-img(src=url_for(page.gallery[currentIndex].img) alt="Image")
 
               - currentIndex++
 
@@ -68,10 +68,10 @@
             .column-item
               picture
                 if page.gallery[currentIndex].avif
-                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                  source(srcset=url_for(page.gallery[currentIndex].avif), type="image/avif")
                 if page.gallery[currentIndex].webp
-                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
-                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+                  source(srcset=url_for(page.gallery[currentIndex].webp), type="image/webp")
+                img.column-item-img(src=url_for(page.gallery[currentIndex].img) alt="Image")
 
               - currentIndex++
 
@@ -86,9 +86,9 @@
             .column-item
               picture
                 if page.gallery[currentIndex].avif
-                  source(srcset=page.gallery[currentIndex].avif, type="image/avif")
+                  source(srcset=url_for(page.gallery[currentIndex].avif), type="image/avif")
                 if page.gallery[currentIndex].webp
-                  source(srcset=page.gallery[currentIndex].webp, type="image/webp")
-                img.column-item-img(src=page.gallery[currentIndex].img alt="Image")
+                  source(srcset=url_for(page.gallery[currentIndex].webp), type="image/webp")
+                img.column-item-img(src=url_for(page.gallery[currentIndex].img) alt="Image")
 
               - currentIndex++
