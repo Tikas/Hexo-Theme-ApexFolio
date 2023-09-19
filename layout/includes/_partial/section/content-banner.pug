@@ -18,11 +18,11 @@ section.section-banner(style=kernelBG)
       span.section-badge(class=fontColor)=theme.section.library.content.badge
     h2.section-title(class=fontColor)
       each itemTitle in theme.section.library.content.title
-        =itemTitle
+        =itemTitle.text
         br
     .section-banner-description
       each itemText in theme.section.library.content.description
-        span.description(class=fontColor)=itemText
+        span.description(class=fontColor)=itemText.text
     if theme.section.library.content.button.text && theme.section.library.content.button.link
       -
         let buttonStyle = theme.section.library.content.button.style

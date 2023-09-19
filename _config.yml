@@ -214,12 +214,12 @@ section:
       background_image: 'linear-gradient(180deg, #fffefe 0%, #efebe2 100%)'
       badge: declaration #标语的徽标, 为空不显示
       title:
-        - Light tomorrow with today.
-        - Time is that we do not come loose.
-        # - 这是没有显示出来的第三行标题, 支持多行标题, 不建议超过三行
+        - text: Light tomorrow with today.
+        - text: Time is that we do not come loose.
+        # - text: 这是没有显示出来的第三行标题, 支持多行标题, 不建议超过三行
       description:
-        - A friend is one of the nicest things you can have, and one of the best things you can be.
-        - Friendship is a sheltering tree.
+        - text: A friend is one of the nicest things you can have, and one of the best things you can be.
+        - text: Friendship is a sheltering tree.
         # - 这是没有显示出来的第三行内容文本, 支持多行文本, 不宜过多
       img: # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
         avif_link: /assets/banner/kernel-banner.avif
@@ -318,12 +318,12 @@ section:
       background_image: 'linear-gradient(180deg, #434343 0%, #161718 100%)'
       badge: declaration #标语的徽标, 为空不显示
       title:
-        - Light tomorrow with today.
-        - Time is that we do not come loose.
+        - text: Light tomorrow with today.
+        - text: Time is that we do not come loose.
         # - 这是没有显示出来的第三行标题, 支持多行标题, 不建议超过三行
       description:
-        - A friend is one of the nicest things you can have, and one of the best things you can be.
-        - Friendship is a sheltering tree.
+        - text: A friend is one of the nicest things you can have, and one of the best things you can be.
+        - text: Friendship is a sheltering tree.
         # - 这是没有显示出来的第三行内容文本, 支持多行文本, 不宜过多
       img: # 图片的 link 为普通的 jpg png gif 等图片格式, link 此值不能为空. avif 和 webp 请专门设置
         avif_link: /assets/banner/content-banner.avif
