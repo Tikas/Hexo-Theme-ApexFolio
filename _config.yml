@@ -203,7 +203,7 @@ slide:
 
 ########################### Home Section ########################### > start
 section:
-  for_home: [kernel, kernel_cards, content, content_cards]
+  for_home: [] # [kernel, kernel_cards, content, content_cards] # hexo 使用 deepMerge 库会导致读取双重配置，默认为空
   use_simple_parallax: true # true 为使用 simpleParallax 视差效果, false 不使用
   library:
     # --------------- Section -> Library -> Kernel Banner --------------- > start
@@ -237,11 +237,11 @@ section:
     kernel_cards:
       # 卡片组的上面部分
       top:
-        enable: true
+        enable: false
         left:
           background_color: '#F2F2F3'
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
@@ -258,13 +258,13 @@ section:
             link: /favicon.ico
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
       # 卡片组的中间部分
       center:
-        enable: true
+        enable: false
         background_color: '#F2F2F3'
         img:
           desktop_img:
@@ -277,13 +277,13 @@ section:
             link: /assets/slide/mobile-3.jpg
           alt: banner image
         text:
-          enable: true # 是否显示文字 true 为显示, false 为不显示
+          enable: false # 是否显示文字 true 为显示, false 为不显示
           title: Quality is the goal
           description: A friend is one of the nicest things you can have, and one of the best things you can be.
           white_font: true #字体颜色, false 为黑色, true 为白色
       # 卡片组的下面部分
       bottom:
-        enable: true
+        enable: false
         left:
           background_color: '#F2F2F3'
           img:
@@ -292,7 +292,7 @@ section:
             link: /assets/slide/2.jpg
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
@@ -304,7 +304,7 @@ section:
             link: /assets/slide/1.jpg
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
@@ -341,11 +341,11 @@ section:
     content_cards:
       # 卡片组的上面部分
       top:
-        enable: true
+        enable: false
         left:
           background_color: '#F2F2F3'
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
@@ -362,13 +362,13 @@ section:
             link: /favicon.ico
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
       # 卡片组的中间部分
       center:
-        enable: true
+        enable: false
         background_color: '#F2F2F3'
         img:
           desktop_img:
@@ -381,13 +381,13 @@ section:
             link: /assets/slide/mobile-3.jpg
           alt: banner image
         text:
-          enable: true # 是否显示文字 true 为显示, false 为不显示
+          enable: false # 是否显示文字 true 为显示, false 为不显示
           title: Quality is the goal
           description: A friend is one of the nicest things you can have, and one of the best things you can be.
           white_font: true #字体颜色, false 为黑色, true 为白色
       # 卡片组的下面部分
       bottom:
-        enable: true
+        enable: false
         left:
           background_color: '#F2F2F3'
           img:
@@ -396,7 +396,7 @@ section:
             link: /assets/slide/2.jpg
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
@@ -408,7 +408,7 @@ section:
             link: /assets/slide/1.jpg
             alt: banner image
           text:
-            enable: true # 是否显示文字 true 为显示, false 为不显示
+            enable: false # 是否显示文字 true 为显示, false 为不显示
             title: Quality is the goal
             description: A friend is one of the nicest things you can have, and one of the best things you can be.
             white_font: false #字体颜色, false 为黑色, true 为白色
