@@ -1,0 +1,107 @@
+.page-gallery
+  display flex
+  margin 8rem auto
+  width 90%
+  max-width var(--global-container)
+  flex-direction row
+  justify-content space-between
+
+.page-gallery-container,
+.inline-wrapper
+  display flex
+  justify-content center
+  align-items center
+
+.page-gallery-container
+  flex-direction column
+
+.page-gallery-show,
+.page-gallery-showcase
+  width 50rem
+  height 50rem
+  background-color #f1f2f3
+  object-fit cover
+
+.page-gallery-showcase
+  display none
+
+.inline-wrapper
+  width 50rem
+  margin 1rem auto
+  flex-wrap wrap
+
+.page-gallery-wrapper
+  width 3rem
+  height 3rem
+  margin 0.25rem
+  border-radius 1rem
+  border 1px solid #333
+  cursor pointer
+  opacity 0.35
+  object-fit cover
+  &.active,
+  &:hover
+    opacity 1
+
+.page-gallery-info
+  margin-left 2rem
+  width 90%
+
+.page-gallery-info-title
+  font-size 2rem
+  font-weight 600
+  line-height 1.125
+
+.page-gallery-info-content
+  margin 3rem auto
+  font-weight 400
+  line-height 1.65
+
+.page-gallery-info-list
+  font-weight 400
+  line-height 1.65
+  margin-bottom 1rem
+
+@media screen and (max-width: 1280px)
+  .page-gallery-show,
+  .page-gallery-showcase
+    width 45rem
+    height 45rem
+  .inline-wrapper
+    width 45rem
+  .page-gallery-wrapper
+    width 2.75rem
+    height 2.75rem
+
+@media screen and (max-width: 1180px)
+  .page-gallery-show,
+  .page-gallery-showcase
+    width 50rem
+    height 50rem
+  .inline-wrapper
+    width 50rem
+  .page-gallery-wrapper
+    width 3rem
+    height 3rem
+  .page-gallery-info
+    margin-left 5vw
+  .page-gallery
+    flex-direction column
+    width 100%
+    margin  4rem auto
+
+@media screen and (max-width: 800px)
+  .page-gallery-show,
+  .page-gallery-showcase
+    width 100vw
+    height 100vw
+  .inline-wrapper
+    width 100vw
+  .page-gallery-wrapper
+    width 3.5rem
+    height 3.5rem
+    border-radius 0.5rem
+  .page-gallery-info
+    margin-left 5vw
+  .page-gallery
+    margin 1rem auto

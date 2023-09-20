@@ -1,0 +1,30 @@
+.page-gallery
+  .page-gallery-container
+    .page-gallery-show
+      each item in page.gallery
+        - let galleryItemAlt = item.alt ? item.alt : 'Gallery pictures'
+        picture
+          if item.avif
+            source(srcset=url_for(item.avif) type='image/avif')
+          if item.webp
+            source(srcset=url_for(item.webp) type='image/webp')
+          img.page-gallery-showcase(src=url_for(item.img) alt=galleryItemAlt)
+    .inline-wrapper
+      each item, index in page.gallery
+        - let galleryItemIndex = 'pageGalleryWrapper(' + (index + 1) + ')' // index 是从 0 开始的，这里要加个 1
+        picture
+          if item.avif
+            source(srcset=url_for(item.avif) type='image/avif')
+          if item.webp
+            source(srcset=url_for(item.webp) type='image/webp')
+          img.page-gallery-wrapper(src=url_for(item.img) onclick=galleryItemIndex)
+
+  .page-gallery-info
+    if page.pageinfo.title
+      h2.page-gallery-info-title=page.pageinfo.title
+    if page.pageinfo.content
+      p.page-gallery-info-content=page.pageinfo.content
+    if page.pageinfo.list
+      ul
+        each item in page.pageinfo.list
+          li.page-gallery-info-list=item

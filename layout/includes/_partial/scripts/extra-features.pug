@@ -12,3 +12,25 @@ if theme.instantpage
       script(src=url_for(theme.instant_page.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadInstantpageJS()')
   else
     script(src=url_for(theme.instant_page.local.js))
+
+if page.gallery
+  script.
+    let galleryItemIndex = 1;
+    function showGalleryWrapper(n) {
+      let galleryShowcase = document.getElementsByClassName("page-gallery-showcase");
+      let dots = document.getElementsByClassName("page-gallery-wrapper");
+      if (n > galleryShowcase.length) { galleryItemIndex = 1 }
+      if (n < 1) { galleryItemIndex = galleryShowcase.length }
+      for (i = 0; i < galleryShowcase.length; i++) {
+        galleryShowcase[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      galleryShowcase[galleryItemIndex - 1].style.display = "block";
+      dots[galleryItemIndex - 1].className += " active";
+    }
+    function pageGalleryWrapper(n) {
+      showGalleryWrapper(galleryItemIndex = n);
+    }
+    showGalleryWrapper(galleryItemIndex);
