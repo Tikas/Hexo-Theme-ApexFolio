@@ -28,19 +28,19 @@ inject:
 # 注意事项：建议规范全站路径 link 最后带一个 "/" 例如 "about/"
 # main menu navigation
 menu:
-  Home: /
-  List:
-    Item1: /
-    Item2: /
-  Link: /
-  About: /about/
+  # Home: /
+  # List:
+  #   Item1: /
+  #   Item2: /
+  # Link: /
+  # About: /about/
 
 # mobile menu navigation, Do not have a submenu
 mobile_menu:
-  Link: /
-  Docs: /
-  About: /about/
-  Contact: /
+  # Link: /
+  # Docs: /
+  # About: /about/
+  # Contact: /
 
 # mobile menu scroll, If not enabled, please set enable to false
 mobile_menu_scroll:
@@ -424,41 +424,41 @@ footer:
     title: # 不设置则显示 hexo 配置文件的 title
     description: # 不设置则显示 hexo 配置文件的 description
   list_group:
-    - list_title: Who we are
-      item:
-        - text: About Us
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
-        - text: FAQ
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
-        - text: Contact Us
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
-    - list_title: Who we are
-      item:
-        - text: About Us
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
-        - text: FAQ
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
-        - text: Contact Us
-          link: /
-          open: in # in 为原窗口打开, out 为新窗口打开
+    # - list_title: Who we are
+    #   item:
+    #     - text: About Us
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
+    #     - text: FAQ
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
+    #     - text: Contact Us
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
+    # - list_title: Who we are
+    #   item:
+    #     - text: About Us
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
+    #     - text: FAQ
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
+    #     - text: Contact Us
+    #       link: /
+    #       open: in # in 为原窗口打开, out 为新窗口打开
   copyright: Copyright © 2008 - 2023 Apexfolio. All rights reserved.
   links:
-    - text: Privacy Policy
-      link: /
-      open: in # in 为原窗口打开, out 为新窗口打开
-      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
-    - text: Terms of Use
-      link: /
-      open: in # in 为原窗口打开, out 为新窗口打开
-      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
-    - text: Cookies
-      link: /
-      open: in # in 为原窗口打开, out 为新窗口打开
-      external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+    # - text: Privacy Policy
+    #   link: /
+    #   open: in # in 为原窗口打开, out 为新窗口打开
+    #   external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+    # - text: Terms of Use
+    #   link: /
+    #   open: in # in 为原窗口打开, out 为新窗口打开
+    #   external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
+    # - text: Cookies
+    #   link: /
+    #   open: in # in 为原窗口打开, out 为新窗口打开
+    #   external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
 
 ########################### Footer ########################### > end

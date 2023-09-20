@@ -1,4 +1,4 @@
-- let footerListGroupLength = theme.footer.list_group.length
+- let footerListGroupLength = theme.footer.list_group ? theme.footer.list_group.length : 0
 - let footerListGroupLengthClass
 case footerListGroupLength
   when 2
@@ -38,7 +38,7 @@ case footerListGroupLength
     .footer-copyright
       span=theme.footer.copyright
     .footer-links
-      if theme.footer.links.length > 0
+      if theme.footer.links
         each item in theme.footer.links
           - let linksOpen = item.open === 'in' ? '' : '_blank'
           - let linksExternal = item.external ? 'external nofollow noreferrer noopener' : ''

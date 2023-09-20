@@ -1,14 +1,15 @@
 nav.menu-content
   ul.menu-list
-    each value, label in theme.menu
-      if typeof value !== 'object'
-        li.menu-item
-          a.menu-link(href=url_for(trim(value)))=label
-      else
-        li.menu-item.menu-item-children
-          a.menu-link(href='javascript:void(0);')!=label + ' ' + '&#8675;'
-          .menu-dropdown
-            ul.menu-list.menu-list-nested
-              each val, lab in value
-                li.menu-item
-                  a.menu-link.menu-link-children(href=url_for(trim(val)))=lab
+    if theme.menu
+      each value, label in theme.menu
+        if typeof value !== 'object'
+          li.menu-item
+            a.menu-link(href=url_for(trim(value)))=label
+        else
+          li.menu-item.menu-item-children
+            a.menu-link(href='javascript:void(0);')!=label + ' ' + '&#8675;'
+            .menu-dropdown
+              ul.menu-list.menu-list-nested
+                each val, lab in value
+                  li.menu-item
+                    a.menu-link.menu-link-children(href=url_for(trim(val)))=lab
