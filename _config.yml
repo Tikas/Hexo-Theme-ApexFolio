@@ -59,72 +59,7 @@ nav_button:
 ########################### Navigation Bar ########################### > end
 
 
-########################### Import ########################### > start
-# TODO：这个不要使用，后续可能会配合全局 loading，目前功能缺失
-imagesloaded:
-  cdn:
-    enable: false # true 启用, false 不启用。启用后, 本地的 imagesloaded js 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js
-      integrity: sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==
-  local:
-    js: /js/imagesloaded.pkgd.min.js
-
-# slide 功能的依赖
-swiper:
-  cdn:
-    enable: true # true 启用, false 不启用。启用后, 本地的 swiper js 和 css 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
-      integrity: sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==
-    css:
-      href: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css
-      integrity: sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==
-  local:
-    js: /js/swiper-bundle.min.js
-    css: /css/swiper-bundle.min.css
-
-# 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
-simple_parallax:
-  cdn:
-    enable: true # true 启用, false 不启用。启用后, 本地的 simpleParallax js 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
-      integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
-  local:
-    js: /js/simpleParallax.min.js
-
-lenis:
-  cdn:
-    # lenis 使用 jsdelivr 的 cdn 加载会报错，暂时没有找到其他 cdn, 先只加载本地的 js
-    enable: false # true 启用, false 不启用。启用后, 本地的 lenis js 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.22/dist/lenis.min.js
-      integrity:
-  local:
-    js: /js/lenis.min.js
-
-gsap:
-  cdn:
-    enable: true # true 启用, false 不启用。启用后, 本地的 gsap js 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js
-      integrity: sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==
-  local:
-    js: /js/gsap.min.js
-
-scroll_trigger:
-  cdn:
-    enable: true # true 启用, false 不启用。启用后, 本地的 ScrollTrigger js 将会在 cdn 加载出错时调用
-    js:
-      src: https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js
-      integrity: sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==
-  local:
-    js: /js/ScrollTrigger.min.js
-########################### Import ########################### > end
-
-
-########################### Slide ########################### > start
+########################### Home Slide ########################### > start
 slide:
   enable: true
   wrapper:
@@ -198,7 +133,7 @@ slide:
           style: primary # 按钮的样式风格
           text: Read more
           link: /
-########################### Slide ########################### > end
+########################### Home Slide ########################### > end
 
 
 ########################### Home Section ########################### > start
@@ -462,3 +397,83 @@ footer:
     #   external: false # 是否外部链接, false 为内部链接, true 会加上 external nofollow noreferrer noopener
 
 ########################### Footer ########################### > end
+
+
+########################### Extra features ########################### > start
+# 预加载 https://instant.page/
+instantpage: true
+########################### Extra features ########################### > end
+
+
+########################### Import ########################### > start
+# TODO：这个不要使用，后续可能会配合全局 loading，目前功能缺失
+imagesloaded:
+  cdn:
+    enable: false # true 启用, false 不启用。启用后, 本地的 imagesloaded js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js
+      integrity: sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==
+  local:
+    js: /js/imagesloaded.pkgd.min.js
+
+# slide 功能的依赖
+swiper:
+  cdn:
+    enable: true # true 启用, false 不启用。启用后, 本地的 swiper js 和 css 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js
+      integrity: sha512-QwpsxtdZRih55GaU/Ce2Baqoy2tEv9GltjAG8yuTy2k9lHqK7VHHp3wWWe+yITYKZlsT3AaCj49ZxMYPp46iJQ==
+    css:
+      href: https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.css
+      integrity: sha512-s6khMl5GDS1HbQ5/SwL1wzMayPwHXPjKoBN5kHUTDqKEPkkGyEZWKyH2lQ3YO2q3dxueG3rE0NHjRawMHd2b6g==
+  local:
+    js: /js/swiper-bundle.min.js
+    css: /css/swiper-bundle.min.css
+
+# 只有在 section 开启 use_simple_parallax 才会加载 simpleParallax.min.js
+simple_parallax:
+  cdn:
+    enable: true # true 启用, false 不启用。启用后, 本地的 simpleParallax js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js
+      integrity: sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA==
+  local:
+    js: /js/simpleParallax.min.js
+
+lenis:
+  cdn:
+    # lenis 使用 jsdelivr 的 cdn 加载会报错，暂时没有找到其他 cdn, 先只加载本地的 js
+    enable: false # true 启用, false 不启用。启用后, 本地的 lenis js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.22/dist/lenis.min.js
+      integrity:
+  local:
+    js: /js/lenis.min.js
+
+gsap:
+  cdn:
+    enable: true # true 启用, false 不启用。启用后, 本地的 gsap js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js
+      integrity: sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==
+  local:
+    js: /js/gsap.min.js
+
+scroll_trigger:
+  cdn:
+    enable: true # true 启用, false 不启用。启用后, 本地的 ScrollTrigger js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js
+      integrity: sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==
+  local:
+    js: /js/ScrollTrigger.min.js
+
+instant_page:
+  cdn:
+    enable: true # true 启用, false 不启用。启用后, 本地的 ScrollTrigger js 将会在 cdn 加载出错时调用
+    js:
+      src: https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js
+      integrity: sha512-p8l0Kir2Q2O+MWF/+qw2yM2LQQf0+m0AMD0EvGTFFL9vHquAXMRQKuyFBvHdTWpGEgIbXZxd9vjCRPUHeAhsOA==
+  local:
+    js: /js/instantpage.min.js
+########################### Import ########################### > end

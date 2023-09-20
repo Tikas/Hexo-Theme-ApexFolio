@@ -1,0 +1,14 @@
+if theme.instantpage
+  script.
+    function loadInstantpageJS() {
+      const script = document.createElement('script');
+      script.src = '#{theme.instant_page.local.js}';
+      document.body.appendChild(script);
+    }
+  if theme.instant_page.cdn.enable && theme.instant_page.cdn.js.src
+    if theme.instant_page.cdn.js.integrity
+      script(src=url_for(theme.instant_page.cdn.js.src) integrity=theme.instant_page.cdn.js.integrity crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadInstantpageJS()')
+    else
+      script(src=url_for(theme.instant_page.cdn.js.src) crossorigin='anonymous' referrerpolicy='no-referrer' onerror='loadInstantpageJS()')
+  else
+    script(src=url_for(theme.instant_page.local.js))

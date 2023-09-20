@@ -27,11 +27,9 @@ html(lang=config.language)
         !=partial('includes/footer', {}, {cache: true})
 
       include ./_partial/scripts/fullscreen-menu.pug
-
       if homePage
         include ./_partial/scripts/home-slide.pug
         include ./_partial/scripts/simple-parallax.pug
-
       if page.open == true
         include ./_partial/scripts/open-wrap.pug
 
@@ -42,3 +40,4 @@ html(lang=config.language)
     if theme.inject.bottom
       each item in theme.inject.bottom
         !=item
+    include ./_partial/scripts/extra-features.pug
