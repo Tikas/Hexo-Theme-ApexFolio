@@ -5,7 +5,7 @@ block content
     article#page
       if (page.gallery && page.pageinfo)
         include includes/_partial/page/gallery.pug
-      .container
+      .container.page-content
         if page.video
           .video-16-9-container
             video.video-16-9(poster=page.video.poster controls prelaod='none')
