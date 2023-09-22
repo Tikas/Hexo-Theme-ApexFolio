@@ -19,7 +19,8 @@ title= tabTitle
 meta(name='author' content=config.author)
 meta(name='copyright' content=pageCopyright)
 meta(name='description' content=pageDescription)
-meta(name='keywords' content=pageKeywords)
+if pageKeywords
+  meta(name='keywords' content=pageKeywords)
 meta(name ='format-detection' content='telephone=no')
 
 !=favicon_tag(theme.site.favicon || config.favicon)
