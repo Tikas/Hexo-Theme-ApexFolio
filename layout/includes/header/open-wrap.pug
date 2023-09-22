@@ -11,12 +11,13 @@
     if page.poster
       .page-poster-info
         h1.page-poster-title= page.title || _p('untitled')
+        - let pagePosterImgAlt = page.poster.alt ? page.poster.alt : page.title
         picture
           if page.poster.avif
             source(srcset=url_for(page.poster.avif), type="image/avif")
           if page.poster.webp
             source(srcset=url_for(page.poster.webp), type="image/webp")
-          img.page-poster-img(src=url_for(page.poster.img) alt=page.title)
+          img.page-poster-img(src=url_for(page.poster.img) alt=pagePosterImgAlt)
         .page-discover-scroll
           .page-text-alt
             span.page-text-span Discover
