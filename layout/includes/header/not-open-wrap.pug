@@ -1,0 +1,13 @@
+.page-info
+  .container.nav-height
+    .breadcrumb
+      //- TODO: 非 post 页面时移除面包屑
+      a.breadcrumb-link(href="/") Home
+      span.breadcrumb-span &gt;
+      if is_post()
+        if page.categories.data.length > 0
+          each item, index in page.categories.data
+            a.breadcrumb-link(href=url_for(item.path), data-pjax-state) #[=item.name]
+    .page-info-container
+      h1.page-info-title= page.title || _p('untitled')
+      if page.description

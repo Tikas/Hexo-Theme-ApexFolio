@@ -1,15 +1,14 @@
 extends includes/layout.pug
 
 block content
-  .nav-height
-    article#page
-      if (page.gallery && page.pageinfo)
-        include includes/_partial/page/gallery.pug
-      .container.page-content
-        if page.video
-          .video-16-9-container
-            video.video-16-9(poster=page.video.poster controls prelaod='none')
-              source(src=page.video.url type='video/mp4')
-        != page.content
-        p= page.type
+  article#page
+    if (page.gallery && page.pageinfo)
+      include includes/_partial/page/gallery.pug
+    .container.page-content
+      if page.video
+        .video-16-9-container
+          video.video-16-9(poster=page.video.poster controls prelaod='none')
+            source(src=page.video.url type='video/mp4')
+      != page.content
+      p= page.type
   #paginator!= paginator()
