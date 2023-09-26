@@ -1,0 +1,12 @@
+if page.maps.picture === true
+  .maps-placeholder
+    picture
+      if page.maps.avif
+        source(srcset=url_for(page.maps.avif) type='image/avif')
+      if page.maps.webp
+        source(srcset=url_for(page.maps.webp) type='image/webp')
+      img.maps-picture(src=url_for(page.maps.img) alt=page.maps.alt)
+    button.maps-button(onclick='loadMapsIframe()') View on map
+else
+  if page.maps.google
+    iframe.maps-iframe(src=url_for(page.maps.google) allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')

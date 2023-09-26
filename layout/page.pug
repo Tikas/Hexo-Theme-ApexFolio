@@ -9,6 +9,12 @@ block content
         .video-16-9-container
           video.video-16-9(poster=page.video.poster controls prelaod='none')
             source(src=page.video.url type='video/mp4')
+
       != page.content
-      p= page.type
+
+      if page.maps
+        include includes/_partial/page/maps.pug
+
+      //- p= page.type
+
   #paginator!= paginator()

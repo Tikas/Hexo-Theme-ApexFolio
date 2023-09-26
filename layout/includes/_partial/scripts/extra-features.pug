@@ -34,3 +34,20 @@ if page.gallery
       showGalleryWrapper(galleryItemIndex = n);
     }
     showGalleryWrapper(galleryItemIndex);
+
+if page.maps
+  if page.maps.picture === true && page.maps.google
+    script.
+      function loadMapsIframe() {
+        var placeholder = document.querySelector('.maps-placeholder');
+        var iframe = document.createElement('iframe');
+        iframe.src = '#{page.maps.google}';
+        iframe.width = '100%';
+        iframe.height = '600';
+        iframe.style.border = 'none';
+        iframe.allowfullscreen = true;
+        iframe.loading = 'lazy';
+        iframe.referrerpolicy = 'no-referrer-when-downgrade';
+        placeholder.innerHTML = ''; // 清空占位符元素
+        placeholder.appendChild(iframe); // 添加 iframe 元素
+      }
