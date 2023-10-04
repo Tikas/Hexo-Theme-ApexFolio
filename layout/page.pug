@@ -1,10 +1,10 @@
 extends includes/layout.pug
 
 block content
-  article#page
+  article
     if (page.gallery && page.pageinfo)
       include includes/_partial/page/gallery.pug
-    .container.page-content
+    .container#page-content
       if page.video
         .video-16-9-container
           video.video-16-9(poster=page.video.poster controls prelaod='none')
