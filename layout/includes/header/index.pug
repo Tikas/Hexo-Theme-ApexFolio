@@ -1,7 +1,7 @@
 header
   !=partial('includes/header/nav', {}, {cache: true})
-  if !is_home()
+  if !is_home() && is_page()
     if page.open == true
-      include ./open-wrap.pug
+      include ./page-open-wrap.pug
     else
-      include ./not-open-wrap.pug
+      include ./page-not-open-wrap.pug
