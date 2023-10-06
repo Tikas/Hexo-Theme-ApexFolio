@@ -21,6 +21,10 @@ inject:
   bottom:
     # - <script src="xxxx"></script>
 
+# 404 page
+error_404:
+  enable: true
+
 ########################### Head ########################### > end
 
 
