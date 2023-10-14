@@ -1,0 +1,73 @@
+- var galleryLength = 0
+
+.container.nav-height
+  .breadcrumb
+    //- TODO: 非 post 页面时移除面包屑
+    a.breadcrumb-link(href="/") Home
+    span.breadcrumb-span &gt;
+    if page.categories.data.length > 0
+      each item, index in page.categories.data
+        a.breadcrumb-link(href=url_for(item.path), data-pjax-state) #[=item.name]
+
+.post_item-info
+  .post_item-info-content
+    h1.post_item-info-title= page.title || _p('untitled')
+    if page.description
+      p.post_item-info-description= page.description
+    if page.gallery
+      - galleryLength = page.gallery.length
+      p.post_item-gallery-title= _p('gallery')
+      .post_item-inline-wrapper
+        each item, index in page.gallery
+          - let galleryItemIndex = 'pageGalleryWrapper(' + (index + 1) + ')' // index 是从 0 开始的，这里要加个 1
+          - let galleryItemAlt = item.alt ? item.alt : _p('gallery')
+          picture
+            if item.avif
+              source(srcset=url_for(item.avif) type='image/avif')
+            if item.webp
+              source(srcset=url_for(item.webp) type='image/webp')
+            img.post_item-gallery-wrapper(src=url_for(item.img) onclick=galleryItemIndex alt=galleryItemAlt)
+    if page.sku
+      p.post_item-gallery-title= _p('sku')
+      .post_item-inline-wrapper
+        each item, index in page.sku
+          - let skuItemIndex = 'pageGalleryWrapper(' + (index + 1 + galleryLength) + ')' // index 是从 0 开始的，这里要加个 1
+          - let skuItemAlt = item.alt ? item.alt : _p('sku')
+          picture
+            if item.avif
+              source(srcset=url_for(item.avif) type='image/avif')
+            if item.webp
+              source(srcset=url_for(item.webp) type='image/webp')
+            img.post_item-gallery-wrapper(src=url_for(item.img) onclick=skuItemIndex alt=skuItemAlt)
+    if page.definition
+      .post_item-definition
+        each item in page.definition
+          .post_item-definition-key
+            if item.title
+              .post_item-definition-title= item.title
+              if item.unit
+                .post_item-definition-unit= item.unit
+            if item.content
+              .post_item-definition-content= item.content
+
+  .post_item-gallery
+    .post_item-gallery-container
+      .post_item-gallery-show
+        if page.gallery
+          each item in page.gallery
+            - let galleryItemAlt = item.alt ? item.alt : _p('gallery')
+            picture
+              if item.avif
+                source(srcset=url_for(item.avif) type='image/avif')
+              if item.webp
+                source(srcset=url_for(item.webp) type='image/webp')
+              img.post_item-gallery-showcase(src=url_for(item.img) alt=galleryItemAlt)
+        if page.sku
+          each item in page.sku
+            - let skuItemAlt = item.alt ? item.alt : _p('sku')
+            picture
+              if item.avif
+                source(srcset=url_for(item.avif) type='image/avif')
+              if item.webp
+                source(srcset=url_for(item.webp) type='image/webp')
+              img.post_item-gallery-showcase(src=url_for(item.img) alt=skuItemAlt)

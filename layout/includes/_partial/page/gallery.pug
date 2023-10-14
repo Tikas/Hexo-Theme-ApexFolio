@@ -9,7 +9,7 @@
           if item.webp
             source(srcset=url_for(item.webp) type='image/webp')
           img.page-gallery-showcase(src=url_for(item.img) alt=galleryItemAlt)
-    .inline-wrapper
+    .page-gallery-inline-wrapper
       each item, index in page.gallery
         - let galleryItemIndex = 'pageGalleryWrapper(' + (index + 1) + ')' // index 是从 0 开始的，这里要加个 1
         picture

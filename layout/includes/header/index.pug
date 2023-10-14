@@ -7,4 +7,6 @@ header
       include ./page/not-open-wrap.pug
 
   if !is_home() && is_post()
-    include ./post/layout-item.pug
+    - var postColor=page.color ? `background-color:${page.color}` : ''
+    .post_item-info-bg(style=postColor)
+      include ./post/layout-item.pug

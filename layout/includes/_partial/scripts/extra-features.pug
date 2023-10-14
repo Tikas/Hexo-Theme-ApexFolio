@@ -13,7 +13,7 @@ if theme.instantpage
   else
     script(src=url_for(theme.instant_page.local.js))
 
-if page.gallery
+if (page.gallery && is_page())
   script.
     let galleryItemIndex = 1;
     function showGalleryWrapper(n) {
@@ -51,3 +51,25 @@ if page.maps
         placeholder.innerHTML = ''; // 清空占位符元素
         placeholder.appendChild(iframe); // 添加 iframe 元素
       }
+
+if (is_post() && (page.gallery || page.sku))
+  script.
+    let galleryItemIndex = 1;
+    function showGalleryWrapper(n) {
+      let galleryShowcase = document.getElementsByClassName("post_item-gallery-showcase");
+      let dots = document.getElementsByClassName("post_item-gallery-wrapper");
+      if (n > galleryShowcase.length) { galleryItemIndex = 1 }
+      if (n < 1) { galleryItemIndex = galleryShowcase.length }
+      for (i = 0; i < galleryShowcase.length; i++) {
+        galleryShowcase[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      galleryShowcase[galleryItemIndex - 1].style.display = "block";
+      dots[galleryItemIndex - 1].className += " active";
+    }
+    function pageGalleryWrapper(n) {
+      showGalleryWrapper(galleryItemIndex = n);
+    }
+    showGalleryWrapper(galleryItemIndex);
