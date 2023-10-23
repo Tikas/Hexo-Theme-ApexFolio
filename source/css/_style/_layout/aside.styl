@@ -1,0 +1,67 @@
+.hide-aside
+  margin-top 6.25rem
+  margin-bottom 6.25rem
+
+.aside-content
+  margin-top 3rem
+
+#aside-content,
+.sticky_layout
+  width 22.5rem
+
+.hide-aside
+  display flex
+  justify-content space-between
+
+.sticky_layout
+  position sticky
+  top 120px
+
+.card-widget
+  padding 0.5rem
+
+.item-headline
+  display flex
+  font-size 1em
+  font-weight bold
+  align-items center
+  margin-bottom 1rem
+  & svg
+    max-width 1.125rem
+    font-size 1.125rem
+  & span
+    margin-left 4px
+
+.toc-content
+  & ol,
+  & li
+    list-style none
+    padding 0
+    margin 0
+  &>ol
+    padding: 0px !important
+  & ol
+    padding-left 0.5rem
+
+.toc-link
+  display flex
+  align-items center
+  min-height 2rem
+  max-width 80%
+  padding 0.5rem 5%
+  color var(--color-text)
+  opacity 0.6
+  & .active,
+  &:hover
+    opacity 1
+    font-weight 700
+
+@media screen and (max-width: 1200px)
+  #aside-content,
+  .sticky_layout
+    width 18.75rem
+
+@media screen and (max-width: 1000px)
+  #aside-content,
+  .sticky_layout
+    display none

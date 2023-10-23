@@ -4,7 +4,7 @@ block content
   article
     if (page.gallery && page.pageinfo)
       include includes/_partial/page/gallery.pug
-    .container#page-content
+    #page-content
       if page.video
         .video-16-9-container
           video.video-16-9(poster=page.video.poster controls prelaod='none')
@@ -17,4 +17,4 @@ block content
 
       //- p= page.type
 
-  #paginator!= paginator()
+    #paginator!= paginator()

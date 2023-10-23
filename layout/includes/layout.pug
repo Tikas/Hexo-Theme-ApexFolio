@@ -1,11 +1,12 @@
 - var homePage = is_home() && page.prev == 0
 - var pageOpenWrap = page.open == true ? 'showcase' : ''
+- let homeHiddenX = homePage ? 'overflow-x: hidden;' : ''
 
 doctype html
 html(lang=config.language)
   head
     include ./head.pug
-  body
+  body(style=homeHiddenX)
     if page.type !== '404'
       //- TODO: message
 
@@ -22,7 +23,19 @@ html(lang=config.language)
           if homePage
             //- 加载首页各板块
             include ./_partial/home-section.pug
-          block content
+
+          .container
+            .hide-aside
+              - let tocPosition = theme.aside.position
+              - let tocPositionVal = tocPosition === 'right' || tocPosition === 'left' ? tocPosition : 'right'
+              if tocPositionVal === 'left'
+                if theme.aside.enable && page.aside !== false
+                  include widget/index.pug
+              block content
+              if tocPositionVal === 'right'
+                if theme.aside.enable && page.aside !== false
+                  include widget/index.pug
+
       footer#footer
         !=partial('includes/footer', {}, {cache: true})
 

@@ -1,0 +1,7 @@
+#card-toc.card-widget
+  .item-headline
+    svg(viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+      path(d='M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z' fill='currentColor')
+    span= _p('aside.toc')
+
+  .toc-content!=toc(page.content, {list_number: false})
